@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 28 Nov 2020 18:20:08 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS7 に Docker をインストールする方法</title><link>https://zhixuan666.github.io/ja/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/4064fc4/</guid><description>&lt;img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" alt="Featured image of post CentOS7 に Docker をインストールする方法" />&lt;h2 id="前提">前提&lt;/h2>
+&lt;p>DockerCE は CentOS7 の64ビットバージョンをサポートし、カーネルバージョンが3.10以上である必要があります&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
+>DOCKER公式サイト&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="インストール">インストール&lt;/h2>
+&lt;h3 id="古いバージョンの-docker-を削除します">古いバージョンの &lt;code>docker&lt;/code> を削除します&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo yum remove docker \
+docker-client \
+docker-client-latest \
+docker-common \
+docker-latest \
+docker-latest-logrotate \
+docker-logrotate \
+docker-engine
+&lt;/code>&lt;/pre>&lt;h3 id="新しいバージョンの-docker-をインストールします">新しいバージョンの &lt;code>docker&lt;/code> をインストールします&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo yum install -y yum-utils
+$ sudo yum-config-manager \
+--add-repo \
+https://download.docker.com/linux/centos/docker-ce.repo
+$ sudo yum install docker-ce docker-ce-cli containerd.io
+&lt;/code>&lt;/pre>&lt;h3 id="ファイアウォールでのポート開放">ファイアウォールでのポート開放&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+$ sudo firewall-cmd --reload
+&lt;/code>&lt;/pre>&lt;h3 id="docker-サービスを起動する">docker サービスを起動する&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl start docker
+&lt;/code>&lt;/pre>&lt;h3 id="自動起動を設定する">自動起動を設定する&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl enable docker
+&lt;/code>&lt;/pre>&lt;hr>
+&lt;h2 id="docker-ユーザーグループを作成する">docker ユーザーグループを作成する&lt;/h2>
+&lt;p>セキュリティー面を考慮してやるかやらないかの方針決めが必要&lt;/p>
+&lt;p>dockerグループはすでにあるはずだけど念の為&lt;/p>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo groupadd docker
+&lt;/code>&lt;/pre>&lt;p>現在のユーザーをdockerグループに入れる&lt;/p>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo usermod -aG docker $USER
+&lt;/code>&lt;/pre>&lt;h3 id="権限の確認">権限の確認&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">再ログイン後(仮想環境であれば、再起動が必要な場合もある)
+$ docker run hello-world
+&lt;/code>&lt;/pre>&lt;hr>
+&lt;h2 id="docker-サービスを再起動起動する">docker サービスを再起動起動する。&lt;/h2>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+&lt;/code>&lt;/pre>&lt;hr>
+&lt;h2 id="ネットが繋がらない">ネットが繋がらない&lt;/h2>
+&lt;p>DNS解決エラーかどうかをテストします。&lt;/p>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ docker run busybox nslookup baidu.com
+nslookup: write to '127.0.1.1': Connection refused
+;; connection timed out; no servers could be reached
+&lt;/code>&lt;/pre>&lt;p>&lt;a class="link" href="#DNS" >DNSエラー&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab" >ファイアウォールが有効になっている場合&lt;/a>&lt;/p>
+&lt;h3 id="dns">DNS&lt;/h3>
+&lt;p>構成ファイル &lt;code>/etc/docker/daemon.json&lt;/code> を変更し、&lt;code>DNS&lt;/code> サーバーを追加して、 `` `Docker```デーモンを再起動します（ファイルが存在しない場合は、新しいファイルを作成してください）&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;dns&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;8.8.8.8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;1.1.1.1&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="感谢及参考">感谢及参考&lt;/h2>
+&lt;ul>
+&lt;li>🔗&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
+>docker&lt;/a>&lt;/li>
+&lt;li>🔗&lt;a class="link" href="https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file" target="_blank" rel="noopener"
+>daemon.json 説明&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!--
+[photo1]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
+[photo2]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
+[photo3]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
+[photo4]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
+[photo5]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
+[photo6]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
+--></description></item><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>WSL のターミナルは、コピー＆ペーストがし辛く、vscodeで操作できないものかと思い立った。&lt;/p>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>WSL (Windows Subsystem for Linux)&lt;/p>
+&lt;p>{% endnote %}&lt;/p>
+&lt;hr>
+&lt;h2 id="ssh-のインストール">ssh のインストール&lt;/h2>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo apt-get remove openssh-server
+$ sudo apt-get install openssh-server
+&lt;/code>&lt;/pre>&lt;h2 id="コンフィグ設定">コンフィグ設定&lt;/h2>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo vi /etc/ssh/sshd_config
+&lt;/code>&lt;/pre>&lt;p>コンフィグの内容を下記のように変える。&lt;/p>
+&lt;p>{% note info %}&lt;/p>
+&lt;pre>&lt;code class="language-conf" data-lang="conf">Port 22 # デフォルトは問題ありません。占有されているポートがある場合は、自分で変更できます
+PasswordAuthentication yes # ユーザー名とパスワードによるログインを許可する
+&lt;/code>&lt;/pre>&lt;p>{% endnote %}&lt;/p>
+&lt;h2 id="補足">補足&lt;/h2>
+&lt;h3 id="ssh-サービスを起動する">ssh サービスを起動する。&lt;/h3>
+&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo service ssh restart
+&lt;/code>&lt;/pre>&lt;h3 id="ssh-サービスを終止する">ssh サービスを終止する。&lt;/h3>
+&lt;p>これで、 &lt;code>ssh&lt;/code> クライアントを使用して &lt;code>wsl&lt;/code> に接続できます。&lt;/p>
+&lt;p>ENJOY WSL!&lt;/p></description></item><item><title>golang hmac-sha256 署名を検証する</title><link>https://zhixuan666.github.io/ja/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/69e3a2bc/</guid><description>&lt;h2 id="hmac-sha256-署名を検証する">hmac-sha256 署名を検証する&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-golang" data-lang="golang">&lt;span class="kd">func&lt;/span> &lt;span class="nf">CheckMAC&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">byte&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">mac&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sha256&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">New&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nx">expectedMAC&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">nil&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">expectedMAC&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>この記事では、全体で &lt;code>root&lt;/code> ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 &lt;code>Ubuntu&lt;/code> やその他の &lt;code>Debian&lt;/code> ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。&lt;/p>
+&lt;p>{% endnote %}&lt;/p>
+&lt;hr>
+&lt;h2 id="minecraftサーバーを構築">Minecraftサーバーを構築&lt;/h2>
+&lt;h3 id="java-と-screen--インストール">&lt;code>Java&lt;/code> と &lt;code>Screen&lt;/code> インストール&lt;/h3>
+&lt;p>Ubuntuおよびその他のDebianベースのコマンド&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt-get update
+$ sudo apt-get install java screen -j
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>RHELのコマンド&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum update
+$ sudo yum install java screen -y
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="サーバーにファイルを保存するためのディレクトリを作成します">サーバーにファイルを保存するためのディレクトリを作成します&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> ~
+mkdir mcserver
+&lt;span class="nb">cd&lt;/span> /mcserver
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>forge サーバーを構築するには、&lt;a class="link" href="#forge-%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b" >こちら&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="普通-サーバーを構築する">&lt;code>普通&lt;/code> サーバーを構築する&lt;/h3>
+&lt;p>&lt;a class="link" href="https://mcversions.net" target="_blank" rel="noopener"
+>MCversions&lt;/a> にアクセスし&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg" alt="MCversions" />&lt;/p>
+&lt;p>必要なバージョンの &lt;code>Server jar&lt;/code> を右クリックし、リンクをコピーして、ターミナルへ&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ wget コピーしたリンクを貼り付けます
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>ダウンロード後、サーバーを起動します。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ java -Xms512M -Xmx1024M -jar server.jar -nogui
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;p>初めては　&lt;code>EULA&lt;/code> ファイルを変更する必要があります&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim eula.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>eula = falseをeula = trueに変更し、コマンドを再入力します。&lt;/p>
+&lt;p>{% endnote %}&lt;/p>
+&lt;hr>
+&lt;p>&lt;a class="link" href="#%e6%a7%8b%e6%88%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab-server.properties" >構成ファイルについて&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="forge-サーバーを構築する">&lt;code>forge&lt;/code> サーバーを構築する&lt;/h3>
+&lt;p>&lt;a class="link" href="https://files.minecraftforge.net" target="_blank" rel="noopener"
+>MinecraftForge&lt;/a> にアクセスし&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg" alt="MinecraftForge" />&lt;/p>
+&lt;p>左がバージョン、真ん中が最新バージョン、右が安定版です。ここから安定版をダウンロードします。&lt;/p>
+&lt;p>右クリックし、リンクをコピーして、ターミナルへ&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ wget コピーしたリンクを貼り付けます
+$ java -jar forge-*****-install.jar -nogui --installServer
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>インストールを待っていると、 &lt;code>ls&lt;/code>　はさらにいくつかのファイルを確認し、次のように入力します。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ java -Xms512M -Xmx1024M -jar forge-*****-universal.jar -nogui
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;p>初めては　&lt;code>EULA&lt;/code> ファイルを変更する必要があります&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim eula.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>eula = falseをeula = trueに変更し、コマンドを再入力します。&lt;/p>
+&lt;p>{% endnote %}&lt;/p>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>modを追加する方法&lt;/p>
+&lt;p>ダウンロードしたmodをmodsフォルダーに入れて、サーバーを再起動。&lt;/p>
+&lt;p>{% endnote %}&lt;/p>
+&lt;hr>
+&lt;h2 id="構成ファイル-serverproperties">構成ファイル &lt;code>server.properties&lt;/code>&lt;/h2>
+&lt;pre>&lt;code class="language-conf" data-lang="conf">enable-command-block=true #コマンドブロックを有効にする
+query.port=25565 #サーバポート
+pvp=false #PVPをオフにします
+&lt;/code>&lt;/pre></description></item><item><title>Windowsインポートリモート証明書</title><link>https://zhixuan666.github.io/ja/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/af239327/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;p>通常、 Windows Server には RDP 証明書がインポートされていません。接続すると、証明書の警告が表示されます。&lt;/p>
+&lt;hr>
+&lt;h2 id="リモート証明書をインストール">リモート証明書をインストール&lt;/h2>
+&lt;h3 id="p12またはpfx形式で証明書をインストール">p12またはpfx形式で証明書をインストール&lt;/h3>
+&lt;p>Windows Serverに接続し、証明書をダブルクリックして、[ローカルコンピューター]&amp;gt; [デフォルトのファイル名]&amp;gt; [パスワードとその他の設定のデフォルトを入力]&amp;gt; [すべての証明書を次のストレージに配置-個​​人]&amp;gt; [完了]を選択します。&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg" alt="安装证书" />&lt;/p>
+&lt;h3 id="証明書ハッシュを取得する">証明書ハッシュを取得する&lt;/h3>
+&lt;p>[Win + R] &amp;gt; [certlm.msc] &amp;gt; [証明書 - ローカルコンピュータ] &amp;gt; [个人] &amp;gt; [証明書] ，インストールした証明書をダブルクリックし、[詳細]&amp;gt; [指紋]を選択します。&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg" alt="certlm" />&lt;/p>
+&lt;div style="width: 200px; margin :auto">
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png" alt="Hash" />&lt;/p>
+&lt;/div>
+&lt;h3 id="rdpサービスを構成する">RDPサービスを構成する&lt;/h3>
+&lt;p>Windows Powershell を&lt;strong>管理者モード&lt;/strong>で開き、次のコマンドを実行します。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="n">wmic&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">namespace&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="p">\\&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">cimv2&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">TerminalServices&lt;/span> &lt;span class="n">PATH&lt;/span> &lt;span class="n">Win32_TSGeneralSetting&lt;/span> &lt;span class="nb">Set &lt;/span>&lt;span class="n">SSLCertificateSHA1Hash&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;上記で取得した証明書の指紋&amp;gt;&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg" alt="RDPサービスを構成する" />&lt;/p>
+&lt;p>「属性が正常に更新されました」というプロンプトが表示されます。&lt;/p>
+&lt;hr>
+&lt;h2 id="接続のテスト">接続のテスト&lt;/h2>
+&lt;p>リモートデスクトップ接続を切断して再接続します。証明書が信頼されていないことを示すものはありません。&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg" alt="Test_remote" />&lt;/p>
+&lt;hr>
+&lt;h2 id="サーバー証明書を削除">サーバー証明書を削除&lt;/h2>
+&lt;p>&lt;code>Win + R&lt;/code> &amp;gt; &lt;code>certlm.msc&lt;/code> &amp;gt; &lt;code>証明書 - ローカルコンピュータ&lt;/code> &amp;gt; &lt;code>个人&lt;/code> &amp;gt; &lt;code>証明書&lt;/code> &amp;gt; &lt;code>削除&lt;/code>&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg" alt="証明書を削除" />&lt;/p>
+&lt;hr>
+&lt;h2 id="感謝--参考">感謝 &amp;amp; 参考&lt;/h2>
+&lt;ul>
+&lt;li>🔗&lt;a class="link" href="https://blog.berd.moe/archives/remote-desktop-setup-ssl-certificate/" target="_blank" rel="noopener"
+>简单的给远程桌面连接 (Remote Desktop) 配置自定义 SSL 证书&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wsl on zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/tags/wsl/</link><description>Recent content in wsl on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 22 Nov 2020 16:41:05 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>WSL のターミナルは、コピー＆ペーストがし辛く、vscodeで操作できないものかと思い立った。&lt;/p>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>WSL (Windows Subsystem for Linux)&lt;/p>
+&lt;p>{% endnote %}&lt;/p></description></item></channel></rss>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/tags/linux/</link><description>Recent content in linux on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 28 Nov 2020 18:20:08 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS7 に Docker をインストールする方法</title><link>https://zhixuan666.github.io/ja/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/4064fc4/</guid><description>&lt;h2 id="前提">前提&lt;/h2>
+&lt;p>DockerCE は CentOS7 の64ビットバージョンをサポートし、カーネルバージョンが3.10以上である必要があります&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
+>DOCKER公式サイト&lt;/a>&lt;/p></description></item><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>WSL のターミナルは、コピー＆ペーストがし辛く、vscodeで操作できないものかと思い立った。&lt;/p>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>WSL (Windows Subsystem for Linux)&lt;/p>
+&lt;p>{% endnote %}&lt;/p></description></item><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>この記事では、全体で &lt;code>root&lt;/code> ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 &lt;code>Ubuntu&lt;/code> やその他の &lt;code>Debian&lt;/code> ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。&lt;/p>
+&lt;p>{% endnote %}&lt;/p></description></item></channel></rss>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Centos on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/centos/</link><description>Recent content in Centos on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 28 Nov 2020 18:20:08 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml"/><item><title>Centos 安装 docker</title><link>https://zhixuan666.github.io/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/posts/4064fc4/</guid><description>&lt;h2 id="安装说明">安装说明&lt;/h2>
+&lt;p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
+>DOCKER官网&lt;/a>&lt;/p></description></item></channel></rss>

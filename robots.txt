@@ -1,0 +1,12 @@
+User-agent: Googlebot
+Allow: /
+
+Disallow: /dark/
+Disallow: /jp/dark/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://zhixuan666.github.io/sitemap.xml
+Sitemap: https://zhixuan666.github.io/ja/sitemap.xml
+Sitemap: https://zhixuan666.github.io/zh-cn/sitemap.xml

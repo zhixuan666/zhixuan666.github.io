@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/github/</link><description>Recent content in Github on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 10 Dec 2020 20:28:51 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;h2 id="github-actions">Github Actions&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
+>Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
+&lt;p>{% note info %}&lt;/p>
+&lt;p>CI/CD (continuous integration and continuous deployment)&lt;/p>
+&lt;p>{% endnote %}&lt;/p></description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>&lt;h2 id="什么是hexo">什么是Hexo？&lt;/h2>
+&lt;p>&lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
+>Hexo&lt;/a> 是高效的静态站点生成框架，它基于 &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
+>Node.js&lt;/a> 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 &lt;a class="link" href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="noopener"
+>标签插件&lt;/a> 来快速的插入特定形式的内容。&lt;/p></description></item></channel></rss>
