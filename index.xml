@@ -36,7 +36,7 @@ public/
 &lt;/code>&lt;/pre>&lt;p>将本地的博客源文件推送到 &lt;code>github&lt;/code> 仓库。&lt;/p>
 &lt;h2 id="准备秘钥">准备秘钥&lt;/h2>
 &lt;p>生成 ssh 部署私钥&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>git config user.email&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -f github-deploy-key -N &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>git config user.email&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -f github-deploy-key -N &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>GitHub Pages 的 repo 里的 &lt;code>Settings/Deploy keys&lt;/code> 中添加刚刚生成的公钥 &lt;code>Title&lt;/code> 随便 值为刚刚生成的公钥
 &lt;code>github-deploy-key.pub&lt;/code>&lt;/p>
 &lt;p>存储博客源文件 的 repo 里的 Settings/Secrets 中添加 &lt;code>DEPLOY_KEY&lt;/code>，值为刚刚生成的私钥
@@ -117,37 +117,37 @@ PUSH!!!
 &lt;hr>
 &lt;h2 id="安装docker">安装docker&lt;/h2>
 &lt;h3 id="删除旧版-docker">删除旧版 &lt;code>docker&lt;/code>&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo yum remove docker \
-docker-client \
-docker-client-latest \
-docker-common \
-docker-latest \
-docker-latest-logrotate \
-docker-logrotate \
-docker-engine
-&lt;/code>&lt;/pre>&lt;h3 id="安装新版-docker">安装新版 &lt;code>docker&lt;/code>&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo yum install -y yum-utils
-$ sudo yum-config-manager \
---add-repo \
-https://download.docker.com/linux/centos/docker-ce.repo
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum remove docker &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-client &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-client-latest &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-common &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-latest &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-latest-logrotate &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-logrotate &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-engine
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="安装新版-docker">安装新版 &lt;code>docker&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum install -y yum-utils
+$ sudo yum-config-manager &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --add-repo &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> https://download.docker.com/linux/centos/docker-ce.repo
 $ sudo yum install docker-ce docker-ce-cli containerd.io
-&lt;/code>&lt;/pre>&lt;h3 id="防火墙">防火墙&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="防火墙">防火墙&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo firewall-cmd --permanent --zone&lt;span class="o">=&lt;/span>trusted --add-interface&lt;span class="o">=&lt;/span>docker0
 $ sudo firewall-cmd --reload
-&lt;/code>&lt;/pre>&lt;h3 id="开启docker">开启docker&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl start docker
-&lt;/code>&lt;/pre>&lt;h3 id="设置开机自启动">设置开机自启动&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl enable docker
-&lt;/code>&lt;/pre>&lt;hr>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="开启docker">开启docker&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl start docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="设置开机自启动">设置开机自启动&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl &lt;span class="nb">enable&lt;/span> docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h2 id="建立-docker-用户组">建立 docker 用户组&lt;/h2>
 &lt;p>默认情况下，docker 命令会使用 Unix socket 与 Docker 引擎通讯。而只有 root 和 docker 组的用户才可以访问 Docker 引擎的 Unix socket。出于安全考虑，一般 Linux 系统上不会直接使用 root 用户。因此，更好地做法是将需要使用 docker 的用户加入 docker 用户组。&lt;/p>
 &lt;p>建立 docker 组：&lt;/p>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo groupadd docker
-&lt;/code>&lt;/pre>&lt;p>复制代码将当前用户加入 docker 组：&lt;/p>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo usermod -aG docker $USER
-&lt;/code>&lt;/pre>&lt;h3 id="测试-docker-是否安装正确">测试 Docker 是否安装正确&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ docker run hello-world
-&lt;/code>&lt;/pre>&lt;hr>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo groupadd docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>复制代码将当前用户加入 docker 组：&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo usermod -aG docker &lt;span class="nv">$USER&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-docker-是否安装正确">测试 Docker 是否安装正确&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ docker run hello-world
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h2 id="镜像加速">镜像加速&lt;/h2>
 &lt;p>鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置 国内镜像加速。
 修改配置文件 &lt;code>/etc/docker/daemon.json&lt;/code> ，添加主机 &lt;code>DNS&lt;/code> 服务器后重启 &lt;code>Docker&lt;/code> 守护进程（如果文件不存在请新建该文件）&lt;/p>
@@ -159,15 +159,15 @@ $ sudo firewall-cmd --reload
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="#%e6%84%9f%e8%b0%a2%e5%8f%8a%e5%8f%82%e8%80%83" >daemon.json 说明&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="重新启动服务">重新启动服务&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl daemon-reload
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
-&lt;/code>&lt;/pre>&lt;hr>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h2 id="发现问题">发现问题&lt;/h2>
 &lt;p>测试是否是DNS解析出错，测试命令如下：&lt;/p>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ docker run busybox nslookup baidu.com
-nslookup: write to '127.0.1.1': Connection refused
-;; connection timed out; no servers could be reached
-&lt;/code>&lt;/pre>&lt;p>没有设置 &lt;a class="link" href="#DNS" >DNS&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ docker run busybox nslookup baidu.com
+nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Connection refused
+&lt;span class="p">;;&lt;/span> connection timed out&lt;span class="p">;&lt;/span> no servers could be reached
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>没有设置 &lt;a class="link" href="#DNS" >DNS&lt;/a>&lt;/p>
 &lt;p>如果启用 &lt;a class="link" href="#%e9%98%b2%e7%81%ab%e5%a2%99" >防火墙&lt;/a>&lt;/p>
 &lt;h3 id="dns">DNS&lt;/h3>
 &lt;p>修改配置文件 &lt;code>/etc/docker/daemon.json&lt;/code> ，添加主机 &lt;code>DNS&lt;/code> 服务器后重启 &lt;code>Docker&lt;/code> 守护进程（如果文件不存在请新建该文件）&lt;/p>
@@ -193,17 +193,17 @@ nslookup: write to '127.0.1.1': Connection refused
 &lt;p>最近因为电脑性能不够，想在 &lt;code>wsl&lt;/code> 上来搭建 &lt;code>code-server&lt;/code> 结果无法启动 &lt;code>ssh&lt;/code> 服务&lt;/p>
 &lt;hr>
 &lt;h2 id="安装-ssh">安装 ssh&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo apt-get remove openssh-server
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt-get remove openssh-server
 $ sudo apt-get install openssh-server
-&lt;/code>&lt;/pre>&lt;h2 id="编辑配置文件">编辑配置文件&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo vi /etc/ssh/sshd_config
-&lt;/code>&lt;/pre>&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="编辑配置文件">编辑配置文件&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo vi /etc/ssh/sshd_config
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
 &lt;p>Port 22 # 默认即可，如果有端口占用可以自己修改
 PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;p>{% endnote %}&lt;/p>
 &lt;h2 id="重启服务">重启服务&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo service ssh restart
-&lt;/code>&lt;/pre>&lt;p>现在可以使用客户端连接 &lt;code>wsl&lt;/code> 了。&lt;/p></description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>&lt;h2 id="使用-hmac-sha256-验证签名">使用 hmac-sha256 验证签名&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo service ssh restart
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>现在可以使用客户端连接 &lt;code>wsl&lt;/code> 了。&lt;/p></description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>&lt;h2 id="使用-hmac-sha256-验证签名">使用 hmac-sha256 验证签名&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-golang" data-lang="golang">&lt;span class="kd">func&lt;/span> &lt;span class="nf">CheckMAC&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">byte&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nx">mac&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sha256&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">New&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">)&lt;/span>
@@ -397,7 +397,7 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>此时以可以用valine&lt;/p>
 &lt;p>{% note danger %}&lt;/p>
 &lt;h3 id="如果只是出现valine不能评论的话">如果只是出现valine不能评论的话&lt;/h3>
-&lt;p>按 &lt;code>F12&lt;/code> 如果在 &lt;code>Console&lt;/code> 出现 ERR:: TIME_OUT&lt;/p>
+&lt;p>按 &lt;code>F12&lt;/code> 如果在 &lt;code>bash&lt;/code> 出现 ERR:: TIME_OUT&lt;/p>
 &lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/console.png" alt="console" />&lt;/p>
 &lt;p>如果是国际版，修改valine&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="nt">valine&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
@@ -511,15 +511,15 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;h2 id="搭建minecraft服务器">搭建Minecraft服务器&lt;/h2>
 &lt;h3 id="安装-java-和-screen">安装 &lt;code>Java&lt;/code> 和 &lt;code>Screen&lt;/code>&lt;/h3>
 &lt;p>Ubuntu和其他的Debian系Linux的命令&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">apt-get update
-apt-get install java screen -j
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt-get update
+$ sudo apt-get install java screen -j
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>RHEL的命令&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">yum update
-yum install java screen -y
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum update
+$ sudo yum install java screen -y
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="创建一个目录存放服务端的文件">创建一个目录存放服务端的文件&lt;/h3>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> / &lt;span class="c1">#进入根目录&lt;/span>
-mkdir mcserver &lt;span class="c1">#创建mcserver文件夹&lt;/span>
-&lt;span class="nb">cd&lt;/span> /mcserver &lt;span class="c1">#进入mcserver文件夹&lt;/span>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">cd&lt;/span> / &lt;span class="c1">#进入根目录&lt;/span>
+$ sudo mkdir mcserver &lt;span class="c1">#创建mcserver文件夹&lt;/span>
+$ &lt;span class="nb">cd&lt;/span> /mcserver &lt;span class="c1">#进入mcserver文件夹&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;p>搭建 &lt;code>forge&lt;/code> 服务器请到 &lt;a class="link" href="#%e6%90%ad%e5%bb%baforge%e6%9c%8d%e5%8a%a1%e5%99%a8" >搭建forge服务器&lt;/a>&lt;/p>
 &lt;hr>

@@ -5,48 +5,48 @@
 &lt;hr>
 &lt;h2 id="インストール">インストール&lt;/h2>
 &lt;h3 id="古いバージョンの-docker-を削除します">古いバージョンの &lt;code>docker&lt;/code> を削除します&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo yum remove docker \
-docker-client \
-docker-client-latest \
-docker-common \
-docker-latest \
-docker-latest-logrotate \
-docker-logrotate \
-docker-engine
-&lt;/code>&lt;/pre>&lt;h3 id="新しいバージョンの-docker-をインストールします">新しいバージョンの &lt;code>docker&lt;/code> をインストールします&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo yum install -y yum-utils
-$ sudo yum-config-manager \
---add-repo \
-https://download.docker.com/linux/centos/docker-ce.repo
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum remove docker &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-client &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-client-latest &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-common &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-latest &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-latest-logrotate &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-logrotate &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> docker-engine
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="新しいバージョンの-docker-をインストールします">新しいバージョンの &lt;code>docker&lt;/code> をインストールします&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum install -y yum-utils
+$ sudo yum-config-manager &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --add-repo &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> https://download.docker.com/linux/centos/docker-ce.repo
 $ sudo yum install docker-ce docker-ce-cli containerd.io
-&lt;/code>&lt;/pre>&lt;h3 id="ファイアウォールでのポート開放">ファイアウォールでのポート開放&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ファイアウォールでのポート開放">ファイアウォールでのポート開放&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo firewall-cmd --permanent --zone&lt;span class="o">=&lt;/span>trusted --add-interface&lt;span class="o">=&lt;/span>docker0
 $ sudo firewall-cmd --reload
-&lt;/code>&lt;/pre>&lt;h3 id="docker-サービスを起動する">docker サービスを起動する&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl start docker
-&lt;/code>&lt;/pre>&lt;h3 id="自動起動を設定する">自動起動を設定する&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl enable docker
-&lt;/code>&lt;/pre>&lt;hr>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="docker-サービスを起動する">docker サービスを起動する&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl start docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="自動起動を設定する">自動起動を設定する&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl &lt;span class="nb">enable&lt;/span> docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h2 id="docker-ユーザーグループを作成する">docker ユーザーグループを作成する&lt;/h2>
 &lt;p>セキュリティー面を考慮してやるかやらないかの方針決めが必要&lt;/p>
 &lt;p>dockerグループはすでにあるはずだけど念の為&lt;/p>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo groupadd docker
-&lt;/code>&lt;/pre>&lt;p>現在のユーザーをdockerグループに入れる&lt;/p>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo usermod -aG docker $USER
-&lt;/code>&lt;/pre>&lt;h3 id="権限の確認">権限の確認&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">再ログイン後(仮想環境であれば、再起動が必要な場合もある)
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo groupadd docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>現在のユーザーをdockerグループに入れる&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo usermod -aG docker &lt;span class="nv">$USER&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="権限の確認">権限の確認&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">再ログイン後&lt;span class="o">(&lt;/span>仮想環境であれば、再起動が必要な場合もある&lt;span class="o">)&lt;/span>
 $ docker run hello-world
-&lt;/code>&lt;/pre>&lt;hr>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h2 id="docker-サービスを再起動起動する">docker サービスを再起動起動する。&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo systemctl daemon-reload
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
-&lt;/code>&lt;/pre>&lt;hr>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h2 id="ネットが繋がらない">ネットが繋がらない&lt;/h2>
 &lt;p>DNS解決エラーかどうかをテストします。&lt;/p>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ docker run busybox nslookup baidu.com
-nslookup: write to '127.0.1.1': Connection refused
-;; connection timed out; no servers could be reached
-&lt;/code>&lt;/pre>&lt;p>&lt;a class="link" href="#DNS" >DNSエラー&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ docker run busybox nslookup baidu.com
+nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Connection refused
+&lt;span class="p">;;&lt;/span> connection timed out&lt;span class="p">;&lt;/span> no servers could be reached
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="#DNS" >DNSエラー&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab" >ファイアウォールが有効になっている場合&lt;/a>&lt;/p>
 &lt;h3 id="dns">DNS&lt;/h3>
 &lt;p>構成ファイル &lt;code>/etc/docker/daemon.json&lt;/code> を変更し、&lt;code>DNS&lt;/code> サーバーを追加して、 `` `Docker```デーモンを再起動します（ファイルが存在しない場合は、新しいファイルを作成してください）&lt;/p>
@@ -75,19 +75,19 @@ nslookup: write to '127.0.1.1': Connection refused
 &lt;p>{% endnote %}&lt;/p>
 &lt;hr>
 &lt;h2 id="ssh-のインストール">ssh のインストール&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo apt-get remove openssh-server
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt-get remove openssh-server
 $ sudo apt-get install openssh-server
-&lt;/code>&lt;/pre>&lt;h2 id="コンフィグ設定">コンフィグ設定&lt;/h2>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo vi /etc/ssh/sshd_config
-&lt;/code>&lt;/pre>&lt;p>コンフィグの内容を下記のように変える。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="コンフィグ設定">コンフィグ設定&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo vi /etc/ssh/sshd_config
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>コンフィグの内容を下記のように変える。&lt;/p>
 &lt;p>{% note info %}&lt;/p>
 &lt;pre>&lt;code class="language-conf" data-lang="conf">Port 22 # デフォルトは問題ありません。占有されているポートがある場合は、自分で変更できます
 PasswordAuthentication yes # ユーザー名とパスワードによるログインを許可する
 &lt;/code>&lt;/pre>&lt;p>{% endnote %}&lt;/p>
 &lt;h2 id="補足">補足&lt;/h2>
 &lt;h3 id="ssh-サービスを起動する">ssh サービスを起動する。&lt;/h3>
-&lt;pre>&lt;code class="language-console" data-lang="console">$ sudo service ssh restart
-&lt;/code>&lt;/pre>&lt;h3 id="ssh-サービスを終止する">ssh サービスを終止する。&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo service ssh restart
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ssh-サービスを終止する">ssh サービスを終止する。&lt;/h3>
 &lt;p>これで、 &lt;code>ssh&lt;/code> クライアントを使用して &lt;code>wsl&lt;/code> に接続できます。&lt;/p>
 &lt;p>ENJOY WSL!&lt;/p></description></item><item><title>golang hmac-sha256 署名を検証する</title><link>https://zhixuan666.github.io/ja/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/69e3a2bc/</guid><description>&lt;h2 id="hmac-sha256-署名を検証する">hmac-sha256 署名を検証する&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-golang" data-lang="golang">&lt;span class="kd">func&lt;/span> &lt;span class="nf">CheckMAC&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">byte&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span>

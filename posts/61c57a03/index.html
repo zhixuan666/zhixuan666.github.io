@@ -18,7 +18,7 @@ Thumbs.db
 node_modules/
 public/
 .deploy*/
-</code></pre><p>将本地的博客源文件推送到 <code>github</code> 仓库。</p><h2 id=准备秘钥>准备秘钥</h2><p>生成 ssh 部署私钥</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>ssh-keygen -t rsa -b <span class=m>4096</span> -C <span class=s2>&#34;</span><span class=k>$(</span>git config user.email<span class=k>)</span><span class=s2>&#34;</span> -f github-deploy-key -N <span class=s2>&#34;&#34;</span>
+</code></pre><p>将本地的博客源文件推送到 <code>github</code> 仓库。</p><h2 id=准备秘钥>准备秘钥</h2><p>生成 ssh 部署私钥</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ ssh-keygen -t rsa -b <span class=m>4096</span> -C <span class=s2>&#34;</span><span class=k>$(</span>git config user.email<span class=k>)</span><span class=s2>&#34;</span> -f github-deploy-key -N <span class=s2>&#34;&#34;</span>
 </code></pre></div><p>GitHub Pages 的 repo 里的 <code>Settings/Deploy keys</code> 中添加刚刚生成的公钥 <code>Title</code> 随便 值为刚刚生成的公钥
 <code>github-deploy-key.pub</code></p><p>存储博客源文件 的 repo 里的 Settings/Secrets 中添加 <code>DEPLOY_KEY</code>，值为刚刚生成的私钥
 <code>github-deploy-key</code></p><p>{% note warning %}</p><p>注意：切记不要多复制空格!!!</p><p>切记要勾选 Allow write access，否则会出现无法部署的情况。</p><p>{% endnote %}</p><h2 id=配置-hexo-的-_configyml>配置 Hexo 的 _config.yml</h2><p>添加部署配置。</p><div class=highlight><pre class=chroma><code class=language-yml data-lang=yml><span class=c># Deployment</span><span class=w>
