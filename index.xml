@@ -251,7 +251,7 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;span class="k">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>其中的css样式属性都可以根据你的自定义图片来更改，以达到最佳的效果。&lt;/p>
-&lt;p>如果没效果 &lt;a class="link" href="#custom-styl-%e6%96%87%e4%bb%b6" >关于styles.styl&lt;/a>&lt;/p>
+&lt;p>如果没效果 &lt;a class="link" href="#customstyl-%e6%96%87%e4%bb%b6" >关于styles.styl&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="点击爱心效果">点击爱心效果&lt;/h3>
 &lt;p>在 &lt;code>/themes/next/source/js&lt;/code> 下新建文件 love.js，在 love.js 文件中添加以下代码:&lt;/p>
