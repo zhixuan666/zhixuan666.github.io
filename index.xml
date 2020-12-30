@@ -197,10 +197,10 @@ nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Co
 $ sudo apt-get install openssh-server
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="编辑配置文件">编辑配置文件&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo vi /etc/ssh/sshd_config
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>Port 22 # 默认即可，如果有端口占用可以自己修改
 PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="重启服务">重启服务&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo service ssh restart
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>现在可以使用客户端连接 &lt;code>wsl&lt;/code> 了。&lt;/p></description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>&lt;h2 id="使用-hmac-sha256-验证签名">使用 hmac-sha256 验证签名&lt;/h2>

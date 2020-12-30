@@ -5,8 +5,8 @@
 <span class=leancloud-visitors-count>1000000</span></span></section></footer></div></header><section class=article-content><h2 id=前言>前言</h2><p>最近因为电脑性能不够，想在 <code>wsl</code> 上来搭建 <code>code-server</code> 结果无法启动 <code>ssh</code> 服务</p><hr><h2 id=安装-ssh>安装 ssh</h2><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ sudo apt-get remove openssh-server
 $ sudo apt-get install openssh-server
 </code></pre></div><h2 id=编辑配置文件>编辑配置文件</h2><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ sudo vi /etc/ssh/sshd_config
-</code></pre></div><p>{% note info %}</p><p>Port 22 # 默认即可，如果有端口占用可以自己修改
-PasswordAuthentication yes # 允许用户名密码方式登录</p><p>{% endnote %}</p><h2 id=重启服务>重启服务</h2><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ sudo service ssh restart
+</code></pre></div><blockquote><p>Port 22 # 默认即可，如果有端口占用可以自己修改
+PasswordAuthentication yes # 允许用户名密码方式登录</p></blockquote><h2 id=重启服务>重启服务</h2><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ sudo service ssh restart
 </code></pre></div><p>现在可以使用客户端连接 <code>wsl</code> 了。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/wsl/>wsl</a>
 <a href=/tags/ssh/>ssh</a>
 <a href=/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/>网络安全</a>
