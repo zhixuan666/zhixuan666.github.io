@@ -18,7 +18,7 @@
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/before.png.webp">
 &lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/before.png" alt="去空行后" />
 &lt;/picture>&lt;/p>
-&lt;p>搞定！&lt;/p></description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;img src="https://repository-images.githubusercontent.com/200244092/c64f8080-586d-11ea-9f2b-fc72525069dd" alt="Featured image of post GitHub Actions 自动化部署 Hexo" />&lt;h2 id="github-actions">Github Actions&lt;/h2>
+&lt;p>搞定！&lt;/p></description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/action.png" alt="Featured image of post GitHub Actions 自动化部署 Hexo" />&lt;h2 id="github-actions">Github Actions&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
 >Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
 &lt;p>{% note info %}&lt;/p>
@@ -119,7 +119,7 @@ PUSH!!!
 [photo4]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 [photo5]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 [photo6]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
---></description></item><item><title>Centos 安装 docker</title><link>https://zhixuan666.github.io/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/posts/4064fc4/</guid><description>&lt;img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" alt="Featured image of post Centos 安装 docker" />&lt;h2 id="安装说明">安装说明&lt;/h2>
+--></description></item><item><title>Centos 安装 docker</title><link>https://zhixuan666.github.io/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/posts/4064fc4/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/docker.png" alt="Featured image of post Centos 安装 docker" />&lt;h2 id="安装说明">安装说明&lt;/h2>
 &lt;p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
 >DOCKER官网&lt;/a>&lt;/p>
