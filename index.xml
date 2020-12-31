@@ -10,8 +10,14 @@
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="nt">html_minifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">exclude&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>查看 html 文件。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/after.png" alt="去空行前" />
-&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/before.png" alt="去空行后" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/after.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/after.png" alt="去空行前" />
+&lt;/picture>
+&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/before.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/44e9e030/before.png" alt="去空行后" />
+&lt;/picture>&lt;/p>
 &lt;p>搞定！&lt;/p></description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;img src="https://repository-images.githubusercontent.com/200244092/c64f8080-586d-11ea-9f2b-fc72525069dd" alt="Featured image of post GitHub Actions 自动化部署 Hexo" />&lt;h2 id="github-actions">Github Actions&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
 >Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
@@ -98,7 +104,10 @@ PUSH!!!
 &lt;h2 id="验证">验证&lt;/h2>
 &lt;p>现在 Hexo 已经和 &lt;code>GitHub Actions&lt;/code> 已经集成了，接下来在博客源码分支上推送代码即可自动编译部署。具体
 执行过程可以在 &lt;code>Actions&lt;/code> 中查看：&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/61c57a03/github-action.png" alt="GitHub Actions" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/61c57a03/github-action.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/61c57a03/github-action.png" alt="GitHub Actions" />
+&lt;/picture>&lt;/p>
 &lt;h2 id="感谢及参考">感谢及参考&lt;/h2>
 &lt;ul>
 &lt;li>🔗&lt;a class="link" href="https://github.com/marketplace/actions/hexo-deploy" target="_blank" rel="noopener"
@@ -217,7 +226,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;p style="text-align: center;">
 通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
 &lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png" alt="Next" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png" alt="Next" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="customstyl-文件">&lt;code>custom.styl&lt;/code> 文件&lt;/h2>
 &lt;p>在新版 &lt;code>Next&lt;/code> 中 &lt;code>custom.styl&lt;/code> 文件改为 &lt;code>blog/source/_data/styles.styl&lt;/code>&lt;/p>
@@ -259,7 +271,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>在 &lt;code>\themes\next\layout\layout.njk&lt;/code> 文件末尾添加以下代码:&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="c">&amp;lt;!-- 页面点击小红心 --&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/love.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/love.js.gif" alt="love.js" />&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/love.js.gif.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/love.js.gif" alt="love.js" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h3 id="点击烟花爆炸效果">点击烟花爆炸效果&lt;/h3>
 &lt;p>在 &lt;code>\themes\next\source\js&lt;/code> 目录下新建一个 fireworks.js 的文件，里面写入以下代码:&lt;/p>
@@ -270,7 +285,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>如果没加载animejs:&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;//cdn.jsdelivr.net/npm/animejs@2.2.0&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;div style="width: 250px; margin :auto">
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/fireworks.png" alt="fireworks.js" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/fireworks.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/fireworks.png" alt="fireworks.js" />
+&lt;/picture>&lt;/p>
 &lt;/div>
 &lt;hr>
 &lt;h3 id="浏览器网页标题恶搞">浏览器网页标题恶搞&lt;/h3>
@@ -297,8 +315,14 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;\js\FunnyTitle.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/failure.ico" target="_blank" rel="noopener"
 >failure.ico下载地址&lt;/a>&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/FunnyTitle-1.png" alt="FunnyTitle.js" />
-&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/FunnyTitle-2.png" alt="FunnyTitle.js" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/FunnyTitle-1.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/FunnyTitle-1.png" alt="FunnyTitle.js" />
+&lt;/picture>
+&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/FunnyTitle-2.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/FunnyTitle-2.png" alt="FunnyTitle.js" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h3 id="添加本站运行时间">添加本站运行时间&lt;/h3>
 &lt;p>在目录 &lt;code>\themes\next\source\js&lt;/code> 下新建一个 &lt;code>blog-run-time.js&lt;/code> 文件，在里面填写如下代码:&lt;/p>
@@ -328,7 +352,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>然后在 &lt;code>\themes\next\layout\_partials\footer.njk&lt;/code> 文件中在 &lt;code>{{- next_inject('footer') }}&lt;/code> 前添加如下代码:&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;days&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/blog-run-time.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/blog-run-time.js.png" alt="blog-run-time.js" />&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/blog-run-time.js.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/blog-run-time.js.png" alt="blog-run-time.js" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="--持续更新--">~ ~ 持续更新 ~ ~&lt;/h2></description></item><item><title>百度网盘在线解析 不限速高速下载</title><link>https://zhixuan666.github.io/posts/9c894058/</link><pubDate>Sat, 10 Oct 2020 10:13:54 +0000</pubDate><guid>https://zhixuan666.github.io/posts/9c894058/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/baidu.jpeg" alt="Featured image of post 百度网盘在线解析 不限速高速下载" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>此工具使用 &lt;code>IDM&lt;/code> + &lt;code>在线解析&lt;/code> 博主的下载速度 &lt;code>16MB&lt;/code>&lt;/p>
@@ -345,20 +372,32 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;p>&lt;strong>分别复制粘贴网盘分享链接和提取码即可&lt;/strong>&lt;/p>
 &lt;p>接着我们点击要下载的文件，会打开一个已解析的页面&lt;/p>
 &lt;div style="width: 500px; margin :auto">
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/page.png" alt="kdbaidu" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/page.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/page.png" alt="kdbaidu" />
+&lt;/picture>&lt;/p>
 &lt;/div>
 &lt;p>修改一下IDM的UA（即User-Agent）&lt;/p>
 &lt;p>具体如下：&lt;/p>
 &lt;p>1.首先打开IDM选项，接着找到下载——UA&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/IDM.png" alt="IDM" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/IDM.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/IDM.png" alt="IDM" />
+&lt;/picture>&lt;/p>
 &lt;p>最后，将UA设置成 &lt;code>显示的User-Agent&lt;/code> ，点击确定即可&lt;/p>
 &lt;div style="width: 500px; margin :auto">
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/User-Agent.png" alt="User-Agent" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/User-Agent.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/User-Agent.png" alt="User-Agent" />
+&lt;/picture>&lt;/p>
 &lt;/div>
 &lt;p>如果想要设置回来，复制以下一段，就能更改回默认&lt;/p>
 &lt;p>Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko&lt;/p>
 &lt;p>复制 &lt;code>URL&lt;/code> 进到IDM中下载。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png" alt="download" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png" alt="download" />
+&lt;/picture>&lt;/p>
 &lt;p>OK!&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
 &lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
 &lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
@@ -373,11 +412,20 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;a class="link" href="https://www.leancloud.cn/" target="_blank" rel="noopener"
 >中国版&lt;/a> 需要 &lt;code>实名&lt;/code> 和 &lt;code>备案&lt;/code>&lt;/p>
 &lt;p>注册并登录，选择创建应用，名称随便写，创建。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/create.png" alt="create" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/create.png.webp">
+&lt;img src="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/create.png" alt="create" />
+&lt;/picture>&lt;/p>
 &lt;p>打开设置 -&amp;gt; 安全中心 -&amp;gt; Web安全域名 -&amp;gt; 添加博客域名&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/domain.png" alt="domain" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/domain.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/domain.png" alt="domain" />
+&lt;/picture>&lt;/p>
 &lt;p>到应用Keys，复制 &lt;code>AppID&lt;/code> 和 &lt;code>AppKey&lt;/code>。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/create.png" alt="create" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/create.png.webp">
+&lt;img src="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/create.png" alt="create" />
+&lt;/picture>&lt;/p>
 &lt;p>打开 &lt;code>主题配置文件&lt;/code> ，找到valine。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="nt">valine&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">enable&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
@@ -398,7 +446,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;p>{% note danger %}&lt;/p>
 &lt;h3 id="如果只是出现valine不能评论的话">如果只是出现valine不能评论的话&lt;/h3>
 &lt;p>按 &lt;code>F12&lt;/code> 如果在 &lt;code>bash&lt;/code> 出现 ERR:: TIME_OUT&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/console.png" alt="console" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/console.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/console.png" alt="console" />
+&lt;/picture>&lt;/p>
 &lt;p>如果是国际版，修改valine&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="nt">valine&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">enable&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
@@ -409,7 +460,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;hr>
 &lt;h2 id="美化-valine">美化 &lt;code>valine&lt;/code>&lt;/h2>
 &lt;h3 id="在-veditor-输入界面增加背景图">在 veditor 输入界面增加背景图&lt;/h3>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/comment.png" alt="comment" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/comment.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/comment.png" alt="comment" />
+&lt;/picture>&lt;/p>
 &lt;p>使用方法如下，将 CSS 加到 &lt;code>themes\next\layout\_third-party\comments\valine.njk&lt;/code>。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">#&lt;/span>&lt;span class="nn">veditor&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">background-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sx">https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp&lt;/span>&lt;span class="p">);&lt;/span>
@@ -426,7 +480,10 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="将-nickemaillink-输入框分开">将 nick、email、link 输入框分开&lt;/h3>
 &lt;p>这个就根据自己改了。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/box.png" alt="输入框分开" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/box.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/box.png" alt="输入框分开" />
+&lt;/picture>&lt;/p>
 &lt;p>使用前请确保 &lt;code>Valine&lt;/code> 评论的 &lt;code>div&lt;/code> 的 &lt;code>id&lt;/code> 是 &lt;code>vcomments&lt;/code>，即 &lt;code>&amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code> 如果是 &lt;code>class&lt;/code> 为 &lt;code>vcomments&lt;/code> ，那么将以下的 &lt;code>#&lt;/code> 换成 &lt;code>.&lt;/code> 即可。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">#&lt;/span>&lt;span class="nn">vcomments&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">vheader&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">vnick&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">31&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
@@ -526,7 +583,10 @@ $ &lt;span class="nb">cd&lt;/span> /mcserver &lt;span class="c1">#进入mcserver
 &lt;h3 id="搭建非forge服务器">搭建非forge服务器&lt;/h3>
 &lt;p>去 &lt;a class="link" href="https://mcversions.net" target="_blank" rel="noopener"
 >MCversions&lt;/a> 下载&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg" alt="MCversions" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg" alt="MCversions" />
+&lt;/picture>&lt;/p>
 &lt;p>右键你想要的版本的 &lt;code>Server Jar&lt;/code> ，复制链接，到终端。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">wget 粘贴刚刚复制到链接
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>下载好了之后，启动服务器：&lt;/p>
@@ -543,7 +603,10 @@ $ &lt;span class="nb">cd&lt;/span> /mcserver &lt;span class="c1">#进入mcserver
 &lt;h3 id="搭建forge服务器">搭建forge服务器&lt;/h3>
 &lt;p>去 &lt;a class="link" href="https://files.minecraftforge.net" target="_blank" rel="noopener"
 >MinecraftForge&lt;/a> 下载&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg" alt="MinecraftForge" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg" alt="MinecraftForge" />
+&lt;/picture>&lt;/p>
 &lt;p>左边是版本，中间是最新版，右边是稳定版，我们这边下载稳定版。
 右键复制链接，到终端。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">wget 粘贴刚刚复制到链接
@@ -624,7 +687,10 @@ $ hexo s --debug
 这个时候，我们在浏览器中访问 &lt;a class="link" href="http://localhost:4000/" target="_blank" rel="noopener"
 >http://localhost:4000/&lt;/a> ，就可以看到基于 Hexo 的默认主题的原型：&lt;/p>
 &lt;p>{% endnote %}&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-1.png" alt="预览1" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-1.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-1.png" alt="预览1" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="安装next主题">安装Next主题&lt;/h2>
 &lt;h3 id="下载next主题">下载Next主题&lt;/h3>
@@ -656,7 +722,10 @@ $ hexo s
 &lt;p>{% note success %}&lt;/p>
 &lt;p>当你看到站点的外观与下图类似就说明你成功安装 &lt;code>Next&lt;/code> 主题。这是 &lt;code>Next&lt;/code> 默认的 &lt;code>Scheme&lt;/code>。&lt;/p>
 &lt;p>{% endnote %}&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-2.png" alt="预览" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-2.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-2.png" alt="预览" />
+&lt;/picture>&lt;/p>
 &lt;p>现在，我们已经成功安装 &lt;code>Next&lt;/code> 主题。&lt;/p>
 &lt;p>{% note info %}&lt;/p>
 &lt;p>关于更多基本操作和基础知识，请查阅 &lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
@@ -669,9 +738,15 @@ $ hexo s
 &lt;h3 id="创建仓库">创建仓库&lt;/h3>
 &lt;p>打开 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >Github&lt;/a>，创建 &lt;code>New repository&lt;/code> ，这里要注意仓库名一定要 &lt;code>your Account Name/github.io&lt;/code> ，这样才能正常显示。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/new_repository.png" alt="创建仓库" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/new_repository.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/new_repository.png" alt="创建仓库" />
+&lt;/picture>&lt;/p>
 &lt;p>然后在 &lt;code>Settings&lt;/code> 中，向下拉有个 &lt;code>Github Pages&lt;/code> ，点击 &lt;code>Choose a theme&lt;/code> 选择一个主题，我选选的是 &lt;code>Cayman&lt;/code>，最后图中这个 &lt;code>https://你的用户名.github.io&lt;/code> 就是创建网站的网址了。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/github-pages.png" alt="github-pages" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/github-pages.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/github-pages.png" alt="github-pages" />
+&lt;/picture>&lt;/p>
 &lt;h3 id="连接github与本地">连接Github与本地&lt;/h3>
 &lt;p>打开 &lt;code>Git Bash&lt;/code> ，设置 &lt;code>user.name&lt;/code> 和 &lt;code>user.email&lt;/code> 配置信息：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="p">&amp;amp;&lt;/span> git config --global user.name &lt;span class="s2">&amp;#34;你的GitHub用户名&amp;#34;&lt;/span>
@@ -684,7 +759,10 @@ Title 为标题，任意即可，将刚才复制的 &lt;code>id_rsa.pub&lt;/code
 在 &lt;code>Git Bash&lt;/code> 中检测 &lt;code>Github&lt;/code> 公钥设置是否成功，输入：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="p">&amp;amp;&lt;/span> ssh git@github.com
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>若看到以下结果，则说明成功了。
-&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/github-ssh.png" alt="github_ssh" />&lt;/p>
+&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/github-ssh.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/github-ssh.png" alt="github_ssh" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="博客初始配置">博客初始配置&lt;/h2>
 &lt;h3 id="配置deployment">配置Deployment&lt;/h3>
@@ -696,7 +774,10 @@ Title 为标题，任意即可，将刚才复制的 &lt;code>id_rsa.pub&lt;/code
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>完成以上配置后保存，让后在 &lt;code>站点根目录&lt;/code> 下打开命令行，执行以下指令安装所需插件：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="p">&amp;amp;&lt;/span> npm install hexo-deployer-git --save
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>继续输入 &lt;code>hexo d&lt;/code> ，会冒出一个 &lt;code>Github&lt;/code> 窗口让你登录。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/login.png" alt="github_login" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/login.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/login.png" alt="github_login" />
+&lt;/picture>&lt;/p>
 &lt;p>完成之后，你可以在 &lt;code>用户名.github.io&lt;/code> 就能看到你的博客了。&lt;/p>
 &lt;h3 id="发布新文章">发布新文章&lt;/h3>
 &lt;h4 id="命令行">命令行&lt;/h4>
@@ -748,26 +829,44 @@ $ hexo version &lt;span class="c1"># 查看Hexo的版本&lt;/span>
 &lt;h2 id="安装远程证书">安装远程证书&lt;/h2>
 &lt;h3 id="安装p12或pfx格式的证书">安装p12或pfx格式的证书&lt;/h3>
 &lt;p>连接到 Windows Server，双击证书，存储位置选择「本地计算机」 &amp;gt; 文件名默认 &amp;gt; 输入密码 &amp;amp; 其他设置默认 &amp;gt; 选择「将所有的证书都放入下列存储 - 个人」&amp;gt; 完成。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg" alt="安装证书" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg" alt="安装证书" />
+&lt;/picture>&lt;/p>
 &lt;h3 id="获取证书-hash">获取证书 Hash&lt;/h3>
 &lt;p>获取证书Hash，&lt;code>Win + R&lt;/code> &amp;gt; &lt;code>certlm.msc&lt;/code> , 在 &lt;code>证书 - 本地计算机&lt;/code> &amp;gt; &lt;code>个人&lt;/code> &amp;gt; &lt;code>证书&lt;/code> ，双击刚安装的证书 &amp;gt; 详细信息 &amp;gt; 指纹。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg" alt="certlm" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg" alt="certlm" />
+&lt;/picture>&lt;/p>
 &lt;div style="width: 200px; margin :auto">
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png" alt="Hash" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png" alt="Hash" />
+&lt;/picture>&lt;/p>
 &lt;/div>
 &lt;h3 id="配置-rdp-服务">配置 RDP 服务&lt;/h3>
 &lt;p>以&lt;strong>管理员模式&lt;/strong>打开 Windows Powershell，执行以下指令：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="n">wmic&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">namespace&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="p">\\&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">cimv2&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">TerminalServices&lt;/span> &lt;span class="n">PATH&lt;/span> &lt;span class="n">Win32_TSGeneralSetting&lt;/span> &lt;span class="nb">Set &lt;/span>&lt;span class="n">SSLCertificateSHA1Hash&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;上面获取的证书指纹&amp;gt;&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg" alt="配置RDP服务" />&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg" alt="配置RDP服务" />
+&lt;/picture>&lt;/p>
 &lt;p>提示「属性更新成功」即可。&lt;/p>
 &lt;hr>
 &lt;h2 id="测试连接">测试连接&lt;/h2>
 &lt;p>断开远程桌面连接，重新连接，此时应该已经没有证书未受信任的提示了。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg" alt="Test_remote" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg" alt="Test_remote" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="移除服务器证书">移除服务器证书&lt;/h2>
 &lt;p>如果要移除服务器上安装的证书，&lt;code>Win + R&lt;/code> &amp;gt; &lt;code>certlm.msc&lt;/code> , 在 &lt;code>证书 - 本地计算机&lt;/code> &amp;gt; &lt;code>个人&lt;/code> &amp;gt; 证书， 下删除安装的证书即可。&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg" alt="移除证书" />&lt;/p>
+&lt;p>&lt;picture>
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg" alt="移除证书" />
+&lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="感谢及参考">感谢及参考&lt;/h2>
 &lt;ul>
