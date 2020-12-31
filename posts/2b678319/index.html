@@ -20,12 +20,12 @@ $ sudo yum install java screen -y
 $ sudo mkdir mcserver  <span class=c1>#创建mcserver文件夹</span>
 $ <span class=nb>cd</span> /mcserver    <span class=c1>#进入mcserver文件夹</span>
 </code></pre></div><hr><p>搭建 <code>forge</code> 服务器请到 <a class=link href=#%e6%90%ad%e5%bb%baforge%e6%9c%8d%e5%8a%a1%e5%99%a8>搭建forge服务器</a></p><hr><h3 id=搭建非forge服务器>搭建非forge服务器</h3><p>去 <a class=link href=https://mcversions.net target=_blank rel=noopener>MCversions</a> 下载</p><p><picture>
-<source type=image/webp srcset=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg.webp><img src=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg alt=MCversions></picture></p><p>右键你想要的版本的 <code>Server Jar</code> ，复制链接，到终端。</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>wget 粘贴刚刚复制到链接
+<source type=image/webp srcset=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg.webp><img loading=lazy src=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg alt=MCversions></picture></p><p>右键你想要的版本的 <code>Server Jar</code> ，复制链接，到终端。</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>wget 粘贴刚刚复制到链接
 </code></pre></div><p>下载好了之后，启动服务器：</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>java -Xms512M -Xmx1024M -jar server.jar -nogui
 </code></pre></div><p>{% note info %}</p><p>第一次需要修改 <code>EULA</code> 文件</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>vim eula.txt
 </code></pre></div><p>将eula=false改成eula=true，再次输入指令。</p><p>搭建成功
 {% endnote %}</p><hr><p>关于<a class=link href=#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6-server-properties>配置文件</a></p><hr><h3 id=搭建forge服务器>搭建forge服务器</h3><p>去 <a class=link href=https://files.minecraftforge.net target=_blank rel=noopener>MinecraftForge</a> 下载</p><p><picture>
-<source type=image/webp srcset=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg.webp><img src=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg alt=MinecraftForge></picture></p><p>左边是版本，中间是最新版，右边是稳定版，我们这边下载稳定版。
+<source type=image/webp srcset=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg.webp><img loading=lazy src=https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg alt=MinecraftForge></picture></p><p>左边是版本，中间是最新版，右边是稳定版，我们这边下载稳定版。
 右键复制链接，到终端。</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>wget 粘贴刚刚复制到链接
 java -jar forge-*****-install.jar -nogui --installServer
 </code></pre></div><p>等待安装， <code>ls</code> 看到多几个文件我们输入：</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>java -Xms512M -Xmx1024M -jar forge-*****-universal.jar -nogui

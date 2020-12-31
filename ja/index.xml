@@ -121,7 +121,7 @@ mkdir mcserver
 >MCversions&lt;/a> にアクセスし&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg" alt="MCversions" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/mcversions.jpg" alt="MCversions" />
 &lt;/picture>&lt;/p>
 &lt;p>必要なバージョンの &lt;code>Server jar&lt;/code> を右クリックし、リンクをコピーして、ターミナルへ&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ wget コピーしたリンクを貼り付けます
@@ -140,7 +140,7 @@ mkdir mcserver
 >MinecraftForge&lt;/a> にアクセスし&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg" alt="MinecraftForge" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/2b678319/minecraftforge.jpg" alt="MinecraftForge" />
 &lt;/picture>&lt;/p>
 &lt;p>左がバージョン、真ん中が最新バージョン、右が安定版です。ここから安定版をダウンロードします。&lt;/p>
 &lt;p>右クリックし、リンクをコピーして、ターミナルへ&lt;/p>
@@ -170,18 +170,18 @@ pvp=false #PVPをオフにします
 &lt;p>Windows Serverに接続し、証明書をダブルクリックして、[ローカルコンピューター]&amp;gt; [デフォルトのファイル名]&amp;gt; [パスワードとその他の設定のデフォルトを入力]&amp;gt; [すべての証明書を次のストレージに配置-個​​人]&amp;gt; [完了]を選択します。&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg" alt="安装证书" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/import.jpg" alt="安装证书" />
 &lt;/picture>&lt;/p>
 &lt;h3 id="証明書ハッシュを取得する">証明書ハッシュを取得する&lt;/h3>
 &lt;p>[Win + R] &amp;gt; [certlm.msc] &amp;gt; [証明書 - ローカルコンピュータ] &amp;gt; [个人] &amp;gt; [証明書] ，インストールした証明書をダブルクリックし、[詳細]&amp;gt; [指紋]を選択します。&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg" alt="certlm" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/certlm.jpg" alt="certlm" />
 &lt;/picture>&lt;/p>
 &lt;div style="width: 200px; margin :auto">
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png" alt="Hash" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/3.png" alt="Hash" />
 &lt;/picture>&lt;/p>
 &lt;/div>
 &lt;h3 id="rdpサービスを構成する">RDPサービスを構成する&lt;/h3>
@@ -189,7 +189,7 @@ pvp=false #PVPをオフにします
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="n">wmic&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">namespace&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="p">\\&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">cimv2&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">TerminalServices&lt;/span> &lt;span class="n">PATH&lt;/span> &lt;span class="n">Win32_TSGeneralSetting&lt;/span> &lt;span class="nb">Set &lt;/span>&lt;span class="n">SSLCertificateSHA1Hash&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;上記で取得した証明書の指紋&amp;gt;&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg" alt="RDPサービスを構成する" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/powershell.jpg" alt="RDPサービスを構成する" />
 &lt;/picture>&lt;/p>
 &lt;p>「属性が正常に更新されました」というプロンプトが表示されます。&lt;/p>
 &lt;hr>
@@ -197,14 +197,14 @@ pvp=false #PVPをオフにします
 &lt;p>リモートデスクトップ接続を切断して再接続します。証明書が信頼されていないことを示すものはありません。&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg" alt="Test_remote" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/test_remote.jpg" alt="Test_remote" />
 &lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="サーバー証明書を削除">サーバー証明書を削除&lt;/h2>
 &lt;p>&lt;code>Win + R&lt;/code> &amp;gt; &lt;code>certlm.msc&lt;/code> &amp;gt; &lt;code>証明書 - ローカルコンピュータ&lt;/code> &amp;gt; &lt;code>个人&lt;/code> &amp;gt; &lt;code>証明書&lt;/code> &amp;gt; &lt;code>削除&lt;/code>&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg" alt="証明書を削除" />
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/af239327/unimport.jpg" alt="証明書を削除" />
 &lt;/picture>&lt;/p>
 &lt;hr>
 &lt;h2 id="感謝--参考">感謝 &amp;amp; 参考&lt;/h2>
