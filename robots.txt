@@ -1,9 +1,3 @@
-User-agent: Googlebot
-Allow: /
-
-Disallow: /dark/
-Disallow: /jp/dark/
-
 User-agent: *
 Allow: /
 
