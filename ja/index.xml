@@ -70,9 +70,9 @@ nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Co
 [photo6]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 --></description></item><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/ssh.png" alt="Featured image of post WSL に SSH で接続する方法" />&lt;h2 id="はじめに">はじめに&lt;/h2>
 &lt;p>WSL のターミナルは、コピー＆ペーストがし辛く、vscodeで操作できないものかと思い立った。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
+&lt;blockquote>
 &lt;p>WSL (Windows Subsystem for Linux)&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="ssh-のインストール">ssh のインストール&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt-get remove openssh-server
