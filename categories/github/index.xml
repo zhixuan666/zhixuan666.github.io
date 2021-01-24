@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on zhixuan's Blog</title><link>https://zhixuan666.github.io/categories/github/</link><description>Recent content in Github on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Dec 2020 20:28:51 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/categories/github/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;h2 id="github-actions">Github Actions&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
->Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
-&lt;p>CI/CD (continuous integration and continuous deployment)&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>&lt;h2 id="什么是hexo">什么是Hexo？&lt;/h2>
-&lt;p>&lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
->Hexo&lt;/a> 是高效的静态站点生成框架，它基于 &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
->Node.js&lt;/a> 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 &lt;a class="link" href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="noopener"
->标签插件&lt;/a> 来快速的插入特定形式的内容。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on zhixuan's Blog</title><link>https://zhixuan666.github.io/categories/github/</link><description>Recent content in Github on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Dec 2020 20:28:51 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/categories/github/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>Github Actions Github Actions 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。
+{% note info %}
+CI/CD (continuous integration and continuous deployment)
+{% endnote %}
+准备 github repo 在本地建立一个Hexo站点，可以参考官方快速开始文档。
+建立两个GitHub仓库。
+存储博客源文件 可以是私有的 挂载GitHub Pages。 在 blog 根目录下添加 .gitignore 文件，添加
+.DS_Store Thumbs.db *.log node_modules/ public/ .deploy*/ 将本地的博客源文件推送到 github 仓库。
+准备秘钥 生成 ssh 部署私钥
+$ ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f github-deploy-key -N &amp;#34;&amp;#34; GitHub Pages 的 repo 里的 Settings/Deploy keys 中添加刚刚生成的公钥 Title 随便 值为刚刚生成的公钥 github-deploy-key.</description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>什么是Hexo？ Hexo 是高效的静态站点生成框架，它基于 Node.js 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。
+安装Hexo 安装前提 安装 Hexo 非常简单。但在安装之前，您必须检查电脑中是否已安装下列应用程序:
+{% note default %}
+Node.js Git {% endnote %}
+安装 Git {% note info %}
+Windows 用户 直接在 官网 下 Git 很慢, 可以通过 这个网页 下载
+{% endnote %}
+安装完 Git 后，右键打开 Git Bash Here ，输入 git --version ,出现版本信息就说明安装成功了。
+zhixuan@DESKTOP-2MMI2OK MINGW64 /d/desktop $ git --version git version 2.</description></item></channel></rss>

@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>valine on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/valine/</link><description>Recent content in valine on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 27 Sep 2020 10:05:32 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/valine/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
-&lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
-&lt;p>{% note warning %}&lt;/p>
-&lt;p>本篇是 &lt;code>Hexo&lt;/code> 的 &lt;code>Next8.0&lt;/code> 主题的valine美化&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>valine on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/valine/</link><description>Recent content in valine on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 27 Sep 2020 10:05:32 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/valine/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>简介 Valine 诞生于2017年8月7日，是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统。
+理论上支持但不限于静态博客，目前已有 Hexo 、 Jekyll 、 Typecho 、 Hugo 、 Ghost 等博客程序在使用Valine。
+{% note warning %}
+本篇是 Hexo 的 Next8.0 主题的valine美化
+{% endnote %}
+启用 valine 访问 leancloud，传送门 国际版 中国版 需要 实名 和 备案
+注册并登录，选择创建应用，名称随便写，创建。
+打开设置 -&amp;gt; 安全中心 -&amp;gt; Web安全域名 -&amp;gt; 添加博客域名
+到应用Keys，复制 AppID 和 AppKey。
+打开 主题配置文件 ，找到valine。
+valine:enable:trueappId:#刚刚复制的appIDappKey:#刚刚复制的appKeyplaceholder:在这里输入评论# 评论框 ```占位提示符```` 。avatar:wavatar # Gravatar 头像展示方式。meta:[nick, mail, link]# 评论者相关属性。pageSize:10# 评论列表分页，每页条数。lang:zh-cn# 语言 zh-CN, zh-TW, en, javisitor:true# 记录访问次数comment_count:# 是否统计评论个数recordIP:# 是否记录ipserverURLs:# api地址enableQQ:false# 是否启用QQ登入requiredFields:[nick, mail]# 设置必填项 [nick,mail,link]此时以可以用valine</description></item></channel></rss>

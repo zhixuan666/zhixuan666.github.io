@@ -1,27 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on zhixuan's Blog</title><link>https://zhixuan666.github.io/categories/hexo/</link><description>Recent content in Hexo on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Dec 2020 22:23:55 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/categories/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>在使用 &lt;a class="link" href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener"
->PageSpeed Insights&lt;/a> 时 blog 的分数是 &lt;code>62&lt;/code>，一看 html 文件发现大量空行。&lt;/p></description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;h2 id="github-actions">Github Actions&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
->Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
-&lt;p>CI/CD (continuous integration and continuous deployment)&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p style="text-align: center;font-size: 1.375em;">
-一个主题，三种外观，选您所好
-&lt;/p>
-&lt;p style="text-align: center;">
-通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
-&lt;/p>
-&lt;p>&lt;picture>
-&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png.webp">
-&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png" alt="Next" />
-&lt;/picture>&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
-&lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
-&lt;p>{% note warning %}&lt;/p>
-&lt;p>本篇是 &lt;code>Hexo&lt;/code> 的 &lt;code>Next8.0&lt;/code> 主题的valine美化&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>&lt;h2 id="什么是hexo">什么是Hexo？&lt;/h2>
-&lt;p>&lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
->Hexo&lt;/a> 是高效的静态站点生成框架，它基于 &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
->Node.js&lt;/a> 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 &lt;a class="link" href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="noopener"
->标签插件&lt;/a> 来快速的插入特定形式的内容。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on zhixuan's Blog</title><link>https://zhixuan666.github.io/categories/hexo/</link><description>Recent content in Hexo on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Dec 2020 22:23:55 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/categories/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>前言 在使用 PageSpeed Insights 时 blog 的分数是 62，一看 html 文件发现大量空行。
+开始解决 $ npm install hexo-html-minifier --save 安装 hexo 插件，Github。
+在站点 _config.yml ,里添加
+html_minifier:exclude:查看 html 文件。
+搞定！</description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>Github Actions Github Actions 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。
+{% note info %}
+CI/CD (continuous integration and continuous deployment)
+{% endnote %}
+准备 github repo 在本地建立一个Hexo站点，可以参考官方快速开始文档。
+建立两个GitHub仓库。
+存储博客源文件 可以是私有的 挂载GitHub Pages。 在 blog 根目录下添加 .gitignore 文件，添加
+.DS_Store Thumbs.db *.log node_modules/ public/ .deploy*/ 将本地的博客源文件推送到 github 仓库。
+准备秘钥 生成 ssh 部署私钥
+$ ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f github-deploy-key -N &amp;#34;&amp;#34; GitHub Pages 的 repo 里的 Settings/Deploy keys 中添加刚刚生成的公钥 Title 随便 值为刚刚生成的公钥 github-deploy-key.</description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>简介 一个主题，三种外观，选您所好 通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
+custom.styl 文件 在新版 Next 中 custom.styl 文件改为 blog/source/_data/styles.styl
+在 主题配置文件 中:
+custom_file_path:#head: source/_data/head.njk#header: source/_data/header.njk#sidebar: source/_data/sidebar.njk#postMeta: source/_data/post-meta.njk#postBodyEnd: source/_data/post-body-end.njk#footer: source/_data/footer.njk#bodyEnd: source/_data/body-end.njk#variable: source/_data/variables.styl#mixin: source/_data/mixins.stylstyle:source/_data/styles.styl 美化 点击爱心效果 点击烟花爆炸效果 浏览器网页标题恶搞 背景图片 背景图片 创建 blog/source/_data/styles.styl 在 styles.styl 文件中添加以下代码:
+body{ background:url(图片链接); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; background-position:center; } 其中的css样式属性都可以根据你的自定义图片来更改，以达到最佳的效果。
+如果没效果 关于styles.styl
+点击爱心效果 在 /themes/next/source/js 下新建文件 love.js，在 love.js 文件中添加以下代码:
+!function(e,t,a){function n(){c(&amp;#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &amp;#39;&amp;#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.</description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>简介 Valine 诞生于2017年8月7日，是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统。
+理论上支持但不限于静态博客，目前已有 Hexo 、 Jekyll 、 Typecho 、 Hugo 、 Ghost 等博客程序在使用Valine。
+{% note warning %}
+本篇是 Hexo 的 Next8.0 主题的valine美化
+{% endnote %}
+启用 valine 访问 leancloud，传送门 国际版 中国版 需要 实名 和 备案
+注册并登录，选择创建应用，名称随便写，创建。
+打开设置 -&amp;gt; 安全中心 -&amp;gt; Web安全域名 -&amp;gt; 添加博客域名
+到应用Keys，复制 AppID 和 AppKey。
+打开 主题配置文件 ，找到valine。
+valine:enable:trueappId:#刚刚复制的appIDappKey:#刚刚复制的appKeyplaceholder:在这里输入评论# 评论框 ```占位提示符```` 。avatar:wavatar # Gravatar 头像展示方式。meta:[nick, mail, link]# 评论者相关属性。pageSize:10# 评论列表分页，每页条数。lang:zh-cn# 语言 zh-CN, zh-TW, en, javisitor:true# 记录访问次数comment_count:# 是否统计评论个数recordIP:# 是否记录ipserverURLs:# api地址enableQQ:false# 是否启用QQ登入requiredFields:[nick, mail]# 设置必填项 [nick,mail,link]此时以可以用valine</description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>什么是Hexo？ Hexo 是高效的静态站点生成框架，它基于 Node.js 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。
+安装Hexo 安装前提 安装 Hexo 非常简单。但在安装之前，您必须检查电脑中是否已安装下列应用程序:
+{% note default %}
+Node.js Git {% endnote %}
+安装 Git {% note info %}
+Windows 用户 直接在 官网 下 Git 很慢, 可以通过 这个网页 下载
+{% endnote %}
+安装完 Git 后，右键打开 Git Bash Here ，输入 git --version ,出现版本信息就说明安装成功了。
+zhixuan@DESKTOP-2MMI2OK MINGW64 /d/desktop $ git --version git version 2.</description></item></channel></rss>

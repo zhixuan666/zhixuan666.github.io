@@ -1,38 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on zhixuan's Blog</title><link>https://zhixuan666.github.io/post/</link><description>Recent content in Posts on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Dec 2020 22:23:55 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>在使用 &lt;a class="link" href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener"
->PageSpeed Insights&lt;/a> 时 blog 的分数是 &lt;code>62&lt;/code>，一看 html 文件发现大量空行。&lt;/p></description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;h2 id="github-actions">Github Actions&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
->Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
-&lt;p>CI/CD (continuous integration and continuous deployment)&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item><item><title>Centos 安装 docker</title><link>https://zhixuan666.github.io/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/posts/4064fc4/</guid><description>&lt;h2 id="安装说明">安装说明&lt;/h2>
-&lt;p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10&lt;/p>
-&lt;p>&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
->DOCKER官网&lt;/a>&lt;/p></description></item><item><title>使用 ssh 工具连接到 wsl</title><link>https://zhixuan666.github.io/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/posts/e0320a75/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>最近因为电脑性能不够，想在 &lt;code>wsl&lt;/code> 上来搭建 &lt;code>code-server&lt;/code> 结果无法启动 &lt;code>ssh&lt;/code> 服务&lt;/p></description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>使用 hmac-sha256 验证签名 func CheckMAC(message, messageMAC, key []byte) bool { mac := hmac.New(sha256.New, key) mac.Write(message) expectedMAC := mac.Sum(nil) return hmac.Equal(messageMAC, expectedMAC) }</description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p style="text-align: center;font-size: 1.375em;">
-一个主题，三种外观，选您所好
-&lt;/p>
-&lt;p style="text-align: center;">
-通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
-&lt;/p>
-&lt;p>&lt;picture>
-&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png.webp">
-&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/bf8435b4/next.png" alt="Next" />
-&lt;/picture>&lt;/p></description></item><item><title>百度网盘在线解析 不限速高速下载</title><link>https://zhixuan666.github.io/posts/9c894058/</link><pubDate>Sat, 10 Oct 2020 10:13:54 +0000</pubDate><guid>https://zhixuan666.github.io/posts/9c894058/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>此工具使用 &lt;code>IDM&lt;/code> + &lt;code>在线解析&lt;/code> 博主的下载速度 &lt;code>16MB&lt;/code>&lt;/p>
-&lt;p>自从大名鼎鼎的pandownload被ban之后，其实陆续出现了很多这一类工具，当时因为有会员在手，所以只是做观望，什么亿寻、速盘、PDown之类的都是前仆后继，各领风骚，可见百度网盘受欢迎的程度。&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
-&lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
-&lt;p>{% note warning %}&lt;/p>
-&lt;p>本篇是 &lt;code>Hexo&lt;/code> 的 &lt;code>Next8.0&lt;/code> 主题的valine美化&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item><item><title>linux搭建Minecraft服务器</title><link>https://zhixuan666.github.io/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/posts/2b678319/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>Minecraft即我的世界，手头有闲置服务器的玩家算是有福了，可以自己搭建服务器，当然这片教程也适用于家庭，只不过需求可能有丶高。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
-&lt;p>本篇教程仅说明如何在Linux下搭建，全程使用root用户，使用的发行版是Debian9.5，同时适用于Ubuntu和其他的Debian系Linux使用，RHEL仅部分命令不同，其他也是相同的。&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>&lt;h2 id="什么是hexo">什么是Hexo？&lt;/h2>
-&lt;p>&lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
->Hexo&lt;/a> 是高效的静态站点生成框架，它基于 &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
->Node.js&lt;/a> 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 &lt;a class="link" href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="noopener"
->标签插件&lt;/a> 来快速的插入特定形式的内容。&lt;/p></description></item><item><title>Windows导入远程证书</title><link>https://zhixuan666.github.io/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/posts/af239327/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>通常 Windows Server 不会配有 RDP 证书，我们连接的时候会看到证书警告。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on zhixuan's Blog</title><link>https://zhixuan666.github.io/post/</link><description>Recent content in Posts on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Dec 2020 22:23:55 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>前言 在使用 PageSpeed Insights 时 blog 的分数是 62，一看 html 文件发现大量空行。
+开始解决 $ npm install hexo-html-minifier --save 安装 hexo 插件，Github。
+在站点 _config.yml ,里添加
+html_minifier:exclude:查看 html 文件。
+搞定！</description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>Github Actions Github Actions 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。
+{% note info %}
+CI/CD (continuous integration and continuous deployment)
+{% endnote %}
+准备 github repo 在本地建立一个Hexo站点，可以参考官方快速开始文档。
+建立两个GitHub仓库。
+存储博客源文件 可以是私有的 挂载GitHub Pages。 在 blog 根目录下添加 .gitignore 文件，添加
+.DS_Store Thumbs.db *.log node_modules/ public/ .deploy*/ 将本地的博客源文件推送到 github 仓库。
+准备秘钥 生成 ssh 部署私钥
+$ ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f github-deploy-key -N &amp;#34;&amp;#34; GitHub Pages 的 repo 里的 Settings/Deploy keys 中添加刚刚生成的公钥 Title 随便 值为刚刚生成的公钥 github-deploy-key.</description></item><item><title>Centos 安装 docker</title><link>https://zhixuan666.github.io/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/posts/4064fc4/</guid><description>安装说明 Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10
+DOCKER官网
+安装docker 删除旧版 docker $ sudo yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-engine 安装新版 docker $ sudo yum install -y yum-utils $ sudo yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo $ sudo yum install docker-ce docker-ce-cli containerd.io 防火墙 $ sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0 $ sudo firewall-cmd --reload 开启docker $ sudo systemctl start docker 设置开机自启动 $ sudo systemctl enable docker 建立 docker 用户组 默认情况下，docker 命令会使用 Unix socket 与 Docker 引擎通讯。而只有 root 和 docker 组的用户才可以访问 Docker 引擎的 Unix socket。出于安全考虑，一般 Linux 系统上不会直接使用 root 用户。因此，更好地做法是将需要使用 docker 的用户加入 docker 用户组。</description></item><item><title>使用 ssh 工具连接到 wsl</title><link>https://zhixuan666.github.io/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/posts/e0320a75/</guid><description>前言 最近因为电脑性能不够，想在 wsl 上来搭建 code-server 结果无法启动 ssh 服务
+安装 ssh $ sudo apt-get remove openssh-server $ sudo apt-get install openssh-server 编辑配置文件 $ sudo vi /etc/ssh/sshd_config Port 22 # 默认即可，如果有端口占用可以自己修改 PasswordAuthentication yes # 允许用户名密码方式登录
+重启服务 $ sudo service ssh restart 现在可以使用客户端连接 wsl 了。</description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>使用 hmac-sha256 验证签名 func CheckMAC(message, messageMAC, key []byte) bool { mac := hmac.New(sha256.New, key) mac.Write(message) expectedMAC := mac.Sum(nil) return hmac.Equal(messageMAC, expectedMAC) }</description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>简介 一个主题，三种外观，选您所好 通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
+custom.styl 文件 在新版 Next 中 custom.styl 文件改为 blog/source/_data/styles.styl
+在 主题配置文件 中:
+custom_file_path:#head: source/_data/head.njk#header: source/_data/header.njk#sidebar: source/_data/sidebar.njk#postMeta: source/_data/post-meta.njk#postBodyEnd: source/_data/post-body-end.njk#footer: source/_data/footer.njk#bodyEnd: source/_data/body-end.njk#variable: source/_data/variables.styl#mixin: source/_data/mixins.stylstyle:source/_data/styles.styl 美化 点击爱心效果 点击烟花爆炸效果 浏览器网页标题恶搞 背景图片 背景图片 创建 blog/source/_data/styles.styl 在 styles.styl 文件中添加以下代码:
+body{ background:url(图片链接); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; background-position:center; } 其中的css样式属性都可以根据你的自定义图片来更改，以达到最佳的效果。
+如果没效果 关于styles.styl
+点击爱心效果 在 /themes/next/source/js 下新建文件 love.js，在 love.js 文件中添加以下代码:
+!function(e,t,a){function n(){c(&amp;#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &amp;#39;&amp;#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.</description></item><item><title>百度网盘在线解析 不限速高速下载</title><link>https://zhixuan666.github.io/posts/9c894058/</link><pubDate>Sat, 10 Oct 2020 10:13:54 +0000</pubDate><guid>https://zhixuan666.github.io/posts/9c894058/</guid><description>前言 此工具使用 IDM + 在线解析 博主的下载速度 16MB
+自从大名鼎鼎的pandownload被ban之后，其实陆续出现了很多这一类工具，当时因为有会员在手，所以只是做观望，什么亿寻、速盘、PDown之类的都是前仆后继，各领风骚，可见百度网盘受欢迎的程度。
+安装IDM IDM下载
+云解析下载地址 KinhDownload网页版
+使用起来也不用我多说了，大家都熟悉
+分别复制粘贴网盘分享链接和提取码即可
+接着我们点击要下载的文件，会打开一个已解析的页面
+修改一下IDM的UA（即User-Agent）
+具体如下：
+1.首先打开IDM选项，接着找到下载——UA
+最后，将UA设置成 显示的User-Agent ，点击确定即可
+如果想要设置回来，复制以下一段，就能更改回默认
+Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
+复制 URL 进到IDM中下载。
+OK!</description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>简介 Valine 诞生于2017年8月7日，是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统。
+理论上支持但不限于静态博客，目前已有 Hexo 、 Jekyll 、 Typecho 、 Hugo 、 Ghost 等博客程序在使用Valine。
+{% note warning %}
+本篇是 Hexo 的 Next8.0 主题的valine美化
+{% endnote %}
+启用 valine 访问 leancloud，传送门 国际版 中国版 需要 实名 和 备案
+注册并登录，选择创建应用，名称随便写，创建。
+打开设置 -&amp;gt; 安全中心 -&amp;gt; Web安全域名 -&amp;gt; 添加博客域名
+到应用Keys，复制 AppID 和 AppKey。
+打开 主题配置文件 ，找到valine。
+valine:enable:trueappId:#刚刚复制的appIDappKey:#刚刚复制的appKeyplaceholder:在这里输入评论# 评论框 ```占位提示符```` 。avatar:wavatar # Gravatar 头像展示方式。meta:[nick, mail, link]# 评论者相关属性。pageSize:10# 评论列表分页，每页条数。lang:zh-cn# 语言 zh-CN, zh-TW, en, javisitor:true# 记录访问次数comment_count:# 是否统计评论个数recordIP:# 是否记录ipserverURLs:# api地址enableQQ:false# 是否启用QQ登入requiredFields:[nick, mail]# 设置必填项 [nick,mail,link]此时以可以用valine</description></item><item><title>linux搭建Minecraft服务器</title><link>https://zhixuan666.github.io/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/posts/2b678319/</guid><description>前言 Minecraft即我的世界，手头有闲置服务器的玩家算是有福了，可以自己搭建服务器，当然这片教程也适用于家庭，只不过需求可能有丶高。
+{% note info %}
+本篇教程仅说明如何在Linux下搭建，全程使用root用户，使用的发行版是Debian9.5，同时适用于Ubuntu和其他的Debian系Linux使用，RHEL仅部分命令不同，其他也是相同的。
+{% endnote %}
+搭建Minecraft服务器 安装 Java 和 Screen Ubuntu和其他的Debian系Linux的命令
+$ sudo apt-get update $ sudo apt-get install java screen -j RHEL的命令
+$ sudo yum update $ sudo yum install java screen -y 创建一个目录存放服务端的文件 $ cd / #进入根目录 $ sudo mkdir mcserver #创建mcserver文件夹 $ cd /mcserver #进入mcserver文件夹 搭建 forge 服务器请到 搭建forge服务器
+搭建非forge服务器 去 MCversions 下载
+右键你想要的版本的 Server Jar ，复制链接，到终端。</description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>什么是Hexo？ Hexo 是高效的静态站点生成框架，它基于 Node.js 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。
+安装Hexo 安装前提 安装 Hexo 非常简单。但在安装之前，您必须检查电脑中是否已安装下列应用程序:
+{% note default %}
+Node.js Git {% endnote %}
+安装 Git {% note info %}
+Windows 用户 直接在 官网 下 Git 很慢, 可以通过 这个网页 下载
+{% endnote %}
+安装完 Git 后，右键打开 Git Bash Here ，输入 git --version ,出现版本信息就说明安装成功了。
+zhixuan@DESKTOP-2MMI2OK MINGW64 /d/desktop $ git --version git version 2.</description></item><item><title>Windows导入远程证书</title><link>https://zhixuan666.github.io/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/posts/af239327/</guid><description>前言 通常 Windows Server 不会配有 RDP 证书，我们连接的时候会看到证书警告。
+安装远程证书 安装p12或pfx格式的证书 连接到 Windows Server，双击证书，存储位置选择「本地计算机」 &amp;gt; 文件名默认 &amp;gt; 输入密码 &amp;amp; 其他设置默认 &amp;gt; 选择「将所有的证书都放入下列存储 - 个人」&amp;gt; 完成。
+获取证书 Hash 获取证书Hash，Win + R &amp;gt; certlm.msc , 在 证书 - 本地计算机 &amp;gt; 个人 &amp;gt; 证书 ，双击刚安装的证书 &amp;gt; 详细信息 &amp;gt; 指纹。
+配置 RDP 服务 以管理员模式打开 Windows Powershell，执行以下指令：
+wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash=&amp;#34;&amp;lt;上面获取的证书指纹&amp;gt;&amp;#34;
+提示「属性更新成功」即可。
+测试连接 断开远程桌面连接，重新连接，此时应该已经没有证书未受信任的提示了。</description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Dec 2020 22:23:55 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Dec 2020 22:23:55 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/1.jpg" alt="Featured image of post 解决 hexo 大量空行" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>在使用 &lt;a class="link" href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener"
 >PageSpeed Insights&lt;/a> 时 blog 的分数是 &lt;code>62&lt;/code>，一看 html 文件发现大量空行。&lt;/p>
 &lt;hr>
@@ -212,14 +212,14 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="重启服务">重启服务&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo service ssh restart
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>现在可以使用客户端连接 &lt;code>wsl&lt;/code> 了。&lt;/p></description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>&lt;h2 id="使用-hmac-sha256-验证签名">使用 hmac-sha256 验证签名&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>现在可以使用客户端连接 &lt;code>wsl&lt;/code> 了。&lt;/p></description></item><item><title>golang hmac-sha256 验证签名</title><link>https://zhixuan666.github.io/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/posts/69e3a2bc/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/3.png" alt="Featured image of post golang hmac-sha256 验证签名" />&lt;h2 id="使用-hmac-sha256-验证签名">使用 hmac-sha256 验证签名&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-golang" data-lang="golang">&lt;span class="kd">func&lt;/span> &lt;span class="nf">CheckMAC&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">byte&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nx">mac&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sha256&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">New&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="nx">expectedMAC&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">nil&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="k">return&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">expectedMAC&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/4.jpg" alt="Featured image of post Hexo Next 美化" />&lt;h2 id="简介">简介&lt;/h2>
 &lt;p style="text-align: center;font-size: 1.375em;">
 一个主题，三种外观，选您所好
 &lt;/p>
@@ -398,7 +398,7 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png.webp">
 &lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png" alt="download" />
 &lt;/picture>&lt;/p>
-&lt;p>OK!&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
+&lt;p>OK!&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/1.jpg" alt="Featured image of post Hexo NexT 魔改 valine" />&lt;h2 id="简介">简介&lt;/h2>
 &lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
 &lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
 &lt;p>{% note warning %}&lt;/p>
@@ -630,7 +630,7 @@ java -jar forge-*****-install.jar -nogui --installServer
 query.port=25565 #服务器的端口
 pvp=false #关闭PVP
 online-mode=false #启用盗版
-&lt;/code>&lt;/pre></description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>&lt;h2 id="什么是hexo">什么是Hexo？&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Github+Hexo+Next搭建博客</title><link>https://zhixuan666.github.io/posts/cfdb546a/</link><pubDate>Thu, 17 Sep 2020 22:16:10 +0000</pubDate><guid>https://zhixuan666.github.io/posts/cfdb546a/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/2.jpg" alt="Featured image of post Github+Hexo+Next搭建博客" />&lt;h2 id="什么是hexo">什么是Hexo？&lt;/h2>
 &lt;p>&lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
 >Hexo&lt;/a> 是高效的静态站点生成框架，它基于 &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
 >Node.js&lt;/a> 。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 &lt;a class="link" href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="noopener"
@@ -823,7 +823,7 @@ $ hexo version &lt;span class="c1"># 查看Hexo的版本&lt;/span>
 &lt;ul>
 &lt;li>🔗&lt;a class="link" href="https://yxyuxuan.github.io/2019/07/16/GitHub-Hexo-Next%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener"
 >GitHub+Hexo+Next搭建博客&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Windows导入远程证书</title><link>https://zhixuan666.github.io/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/posts/af239327/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;/ul></description></item><item><title>Windows导入远程证书</title><link>https://zhixuan666.github.io/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/posts/af239327/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/2.jpg" alt="Featured image of post Windows导入远程证书" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>通常 Windows Server 不会配有 RDP 证书，我们连接的时候会看到证书警告。&lt;/p>
 &lt;hr>
 &lt;h2 id="安装远程证书">安装远程证书&lt;/h2>

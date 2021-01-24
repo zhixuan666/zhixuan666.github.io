@@ -89,7 +89,7 @@ PasswordAuthentication yes # ユーザー名とパスワードによるログイ
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo service ssh restart
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ssh-サービスを終止する">ssh サービスを終止する。&lt;/h3>
 &lt;p>これで、 &lt;code>ssh&lt;/code> クライアントを使用して &lt;code>wsl&lt;/code> に接続できます。&lt;/p>
-&lt;p>ENJOY WSL!&lt;/p></description></item><item><title>golang hmac-sha256 署名を検証する</title><link>https://zhixuan666.github.io/ja/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/69e3a2bc/</guid><description>&lt;h2 id="hmac-sha256-署名を検証する">hmac-sha256 署名を検証する&lt;/h2>
+&lt;p>ENJOY WSL!&lt;/p></description></item><item><title>golang hmac-sha256 署名を検証する</title><link>https://zhixuan666.github.io/ja/posts/69e3a2bc/</link><pubDate>Sat, 07 Nov 2020 22:14:34 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/69e3a2bc/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/3.png" alt="Featured image of post golang hmac-sha256 署名を検証する" />&lt;h2 id="hmac-sha256-署名を検証する">hmac-sha256 署名を検証する&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-golang" data-lang="golang">&lt;span class="kd">func&lt;/span> &lt;span class="nf">CheckMAC&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">byte&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nx">mac&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sha256&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">New&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">)&lt;/span>
@@ -162,7 +162,7 @@ $ java -jar forge-*****-install.jar -nogui --installServer
 &lt;pre>&lt;code class="language-conf" data-lang="conf">enable-command-block=true #コマンドブロックを有効にする
 query.port=25565 #サーバポート
 pvp=false #PVPをオフにします
-&lt;/code>&lt;/pre></description></item><item><title>Windowsインポートリモート証明書</title><link>https://zhixuan666.github.io/ja/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/af239327/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Windowsインポートリモート証明書</title><link>https://zhixuan666.github.io/ja/posts/af239327/</link><pubDate>Mon, 14 Sep 2020 19:02:59 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/af239327/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/2.jpg" alt="Featured image of post Windowsインポートリモート証明書" />&lt;h2 id="初めに">初めに&lt;/h2>
 &lt;p>通常、 Windows Server には RDP 証明書がインポートされていません。接続すると、証明書の警告が表示されます。&lt;/p>
 &lt;hr>
 &lt;h2 id="リモート証明書をインストール">リモート証明書をインストール&lt;/h2>

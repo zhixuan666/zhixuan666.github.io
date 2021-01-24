@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github Action on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/github-action/</link><description>Recent content in Github Action on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Dec 2020 20:28:51 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/github-action/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;h2 id="github-actions">Github Actions&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
->Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
-&lt;p>CI/CD (continuous integration and continuous deployment)&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github Action on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/github-action/</link><description>Recent content in Github Action on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Dec 2020 20:28:51 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/github-action/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>Github Actions Github Actions 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。
+{% note info %}
+CI/CD (continuous integration and continuous deployment)
+{% endnote %}
+准备 github repo 在本地建立一个Hexo站点，可以参考官方快速开始文档。
+建立两个GitHub仓库。
+存储博客源文件 可以是私有的 挂载GitHub Pages。 在 blog 根目录下添加 .gitignore 文件，添加
+.DS_Store Thumbs.db *.log node_modules/ public/ .deploy*/ 将本地的博客源文件推送到 github 仓库。
+准备秘钥 生成 ssh 部署私钥
+$ ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f github-deploy-key -N &amp;#34;&amp;#34; GitHub Pages 的 repo 里的 Settings/Deploy keys 中添加刚刚生成的公钥 Title 随便 值为刚刚生成的公钥 github-deploy-key.</description></item></channel></rss>

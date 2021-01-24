@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minecraft on zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/categories/minecraft/</link><description>Recent content in Minecraft on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Sep 2020 21:21:52 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/categories/minecraft/index.xml" rel="self" type="application/rss+xml"/><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
-&lt;p>{% note info %}&lt;/p>
-&lt;p>この記事では、全体で &lt;code>root&lt;/code> ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 &lt;code>Ubuntu&lt;/code> やその他の &lt;code>Debian&lt;/code> ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。&lt;/p>
-&lt;p>{% endnote %}&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minecraft on zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/categories/minecraft/</link><description>Recent content in Minecraft on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Sep 2020 21:21:52 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/categories/minecraft/index.xml" rel="self" type="application/rss+xml"/><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>初めに {% note info %}
+この記事では、全体で root ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 Ubuntu やその他の Debian ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。
+{% endnote %}
+Minecraftサーバーを構築 Java と Screen インストール Ubuntuおよびその他のDebianベースのコマンド
+$ sudo apt-get update $ sudo apt-get install java screen -j RHELのコマンド
+$ sudo yum update $ sudo yum install java screen -y サーバーにファイルを保存するためのディレクトリを作成します cd ~ mkdir mcserver cd /mcserver forge サーバーを構築するには、こちら
+普通 サーバーを構築する MCversions にアクセスし
+必要なバージョンの Server jar を右クリックし、リンクをコピーして、ターミナルへ</description></item></channel></rss>

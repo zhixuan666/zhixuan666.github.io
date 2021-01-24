@@ -1,3 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IDM on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/idm/</link><description>Recent content in IDM on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 10 Oct 2020 10:13:54 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/idm/index.xml" rel="self" type="application/rss+xml"/><item><title>百度网盘在线解析 不限速高速下载</title><link>https://zhixuan666.github.io/posts/9c894058/</link><pubDate>Sat, 10 Oct 2020 10:13:54 +0000</pubDate><guid>https://zhixuan666.github.io/posts/9c894058/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>此工具使用 &lt;code>IDM&lt;/code> + &lt;code>在线解析&lt;/code> 博主的下载速度 &lt;code>16MB&lt;/code>&lt;/p>
-&lt;p>自从大名鼎鼎的pandownload被ban之后，其实陆续出现了很多这一类工具，当时因为有会员在手，所以只是做观望，什么亿寻、速盘、PDown之类的都是前仆后继，各领风骚，可见百度网盘受欢迎的程度。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IDM on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/idm/</link><description>Recent content in IDM on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 10 Oct 2020 10:13:54 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/idm/index.xml" rel="self" type="application/rss+xml"/><item><title>百度网盘在线解析 不限速高速下载</title><link>https://zhixuan666.github.io/posts/9c894058/</link><pubDate>Sat, 10 Oct 2020 10:13:54 +0000</pubDate><guid>https://zhixuan666.github.io/posts/9c894058/</guid><description>前言 此工具使用 IDM + 在线解析 博主的下载速度 16MB
+自从大名鼎鼎的pandownload被ban之后，其实陆续出现了很多这一类工具，当时因为有会员在手，所以只是做观望，什么亿寻、速盘、PDown之类的都是前仆后继，各领风骚，可见百度网盘受欢迎的程度。
+安装IDM IDM下载
+云解析下载地址 KinhDownload网页版
+使用起来也不用我多说了，大家都熟悉
+分别复制粘贴网盘分享链接和提取码即可
+接着我们点击要下载的文件，会打开一个已解析的页面
+修改一下IDM的UA（即User-Agent）
+具体如下：
+1.首先打开IDM选项，接着找到下载——UA
+最后，将UA设置成 显示的User-Agent ，点击确定即可
+如果想要设置回来，复制以下一段，就能更改回默认
+Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
+复制 URL 进到IDM中下载。
+OK!</description></item></channel></rss>
