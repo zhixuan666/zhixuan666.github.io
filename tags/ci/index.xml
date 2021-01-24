@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CI on zhixuan's Blog</title><link>https://zhixuan666.github.io/tags/ci/</link><description>Recent content in CI on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Dec 2020 20:28:51 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/tags/ci/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>Github Actions Github Actions 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。
-{% note info %}
 CI/CD (continuous integration and continuous deployment)
-{% endnote %}
 准备 github repo 在本地建立一个Hexo站点，可以参考官方快速开始文档。
 建立两个GitHub仓库。
 存储博客源文件 可以是私有的 挂载GitHub Pages。 在 blog 根目录下添加 .gitignore 文件，添加

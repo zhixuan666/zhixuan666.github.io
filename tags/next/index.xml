@@ -23,8 +23,6 @@ valine:enable:trueappId:#刚刚复制的appIDappKey:#刚刚复制的appKeyplaceh
 安装Hexo 安装前提 安装 Hexo 非常简单。但在安装之前，您必须检查电脑中是否已安装下列应用程序:
 {% note default %}
 Node.js Git {% endnote %}
-安装 Git {% note info %}
-Windows 用户 直接在 官网 下 Git 很慢, 可以通过 这个网页 下载
-{% endnote %}
+安装 Git Windows 用户 直接在 官网 下 Git 很慢, 可以通过 这个网页 下载
 安装完 Git 后，右键打开 Git Bash Here ，输入 git --version ,出现版本信息就说明安装成功了。
-zhixuan@DESKTOP-2MMI2OK MINGW64 /d/desktop $ git --version git version 2.</description></item></channel></rss>
+zhixuan@DESKTOP-2MMI2OK MINGW64 /d/desktop $ git --version git version 2.28.0.windows.1 安装Node.js 接下来安装 Node.js ，在 官网 下载即可。</description></item></channel></rss>

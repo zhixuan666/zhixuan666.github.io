@@ -80,11 +80,9 @@ $ sudo apt-get install openssh-server
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="コンフィグ設定">コンフィグ設定&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo vi /etc/ssh/sshd_config
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>コンフィグの内容を下記のように変える。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
 &lt;pre>&lt;code class="language-conf" data-lang="conf">Port 22 # デフォルトは問題ありません。占有されているポートがある場合は、自分で変更できます
 PasswordAuthentication yes # ユーザー名とパスワードによるログインを許可する
-&lt;/code>&lt;/pre>&lt;p>{% endnote %}&lt;/p>
-&lt;h2 id="補足">補足&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h2 id="補足">補足&lt;/h2>
 &lt;h3 id="ssh-サービスを起動する">ssh サービスを起動する。&lt;/h3>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo service ssh restart
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ssh-サービスを終止する">ssh サービスを終止する。&lt;/h3>
@@ -97,9 +95,9 @@ PasswordAuthentication yes # ユーザー名とパスワードによるログイ
 &lt;span class="k">return&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">expectedMAC&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/minecraft.png" alt="Featured image of post linux Minecraftサーバーを構築" />&lt;h2 id="初めに">初めに&lt;/h2>
-&lt;p>{% note info %}&lt;/p>
+&lt;blockquote>
 &lt;p>この記事では、全体で &lt;code>root&lt;/code> ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 &lt;code>Ubuntu&lt;/code> やその他の &lt;code>Debian&lt;/code> ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="minecraftサーバーを構築">Minecraftサーバーを構築&lt;/h2>
 &lt;h3 id="java-と-screen--インストール">&lt;code>Java&lt;/code> と &lt;code>Screen&lt;/code> インストール&lt;/h3>
@@ -127,11 +125,13 @@ mkdir mcserver
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ wget コピーしたリンクを貼り付けます
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>ダウンロード後、サーバーを起動します。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ java -Xms512M -Xmx1024M -jar server.jar -nogui
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>初めては　&lt;code>EULA&lt;/code> ファイルを変更する必要があります&lt;/p>
+&lt;/blockquote>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim eula.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>eula = falseをeula = trueに変更し、コマンドを再入力します。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>eula = false を eula = trueに変更し、コマンドを再入力します。&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;p>&lt;a class="link" href="#%e6%a7%8b%e6%88%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab-server.properties" >構成ファイルについて&lt;/a>&lt;/p>
 &lt;hr>
@@ -148,15 +148,17 @@ mkdir mcserver
 $ java -jar forge-*****-install.jar -nogui --installServer
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>インストールを待っていると、 &lt;code>ls&lt;/code>　はさらにいくつかのファイルを確認し、次のように入力します。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ java -Xms512M -Xmx1024M -jar forge-*****-universal.jar -nogui
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>初めては　&lt;code>EULA&lt;/code> ファイルを変更する必要があります&lt;/p>
+&lt;/blockquote>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim eula.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>eula = falseをeula = trueに変更し、コマンドを再入力します。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
-&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>eula = falseをeula = trueに変更し、コマンドを再入力します。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
 &lt;p>modを追加する方法&lt;/p>
 &lt;p>ダウンロードしたmodをmodsフォルダーに入れて、サーバーを再起動。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="構成ファイル-serverproperties">構成ファイル &lt;code>server.properties&lt;/code>&lt;/h2>
 &lt;pre>&lt;code class="language-conf" data-lang="conf">enable-command-block=true #コマンドブロックを有効にする

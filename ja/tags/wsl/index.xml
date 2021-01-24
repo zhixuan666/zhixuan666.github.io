@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wsl on zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/tags/wsl/</link><description>Recent content in wsl on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Nov 2020 16:41:05 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>はじめに WSL のターミナルは、コピー＆ペーストがし辛く、vscodeで操作できないものかと思い立った。
 WSL (Windows Subsystem for Linux)
 ssh のインストール $ sudo apt-get remove openssh-server $ sudo apt-get install openssh-server コンフィグ設定 $ sudo vi /etc/ssh/sshd_config コンフィグの内容を下記のように変える。
-{% note info %}
-Port 22 # デフォルトは問題ありません。占有されているポートがある場合は、自分で変更できます PasswordAuthentication yes # ユーザー名とパスワードによるログインを許可する {% endnote %}
-補足 ssh サービスを起動する。 $ sudo service ssh restart ssh サービスを終止する。 これで、 ssh クライアントを使用して wsl に接続できます。
+Port 22 # デフォルトは問題ありません。占有されているポートがある場合は、自分で変更できます PasswordAuthentication yes # ユーザー名とパスワードによるログインを許可する 補足 ssh サービスを起動する。 $ sudo service ssh restart ssh サービスを終止する。 これで、 ssh クライアントを使用して wsl に接続できます。
 ENJOY WSL!</description></item></channel></rss>

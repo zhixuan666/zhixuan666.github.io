@@ -21,9 +21,9 @@
 &lt;p>搞定！&lt;/p></description></item><item><title>GitHub Actions 自动化部署 Hexo</title><link>https://zhixuan666.github.io/posts/61c57a03/</link><pubDate>Thu, 10 Dec 2020 20:28:51 +0000</pubDate><guid>https://zhixuan666.github.io/posts/61c57a03/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/action.png" alt="Featured image of post GitHub Actions 自动化部署 Hexo" />&lt;h2 id="github-actions">Github Actions&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/features/actions" target="_blank" rel="noopener"
 >Github Actions&lt;/a> 是 GitHub 官方 CI 工具，与 GitHub 无缝集成。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
+&lt;blockquote>
 &lt;p>CI/CD (continuous integration and continuous deployment)&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="准备-github-repo">准备 &lt;code>github repo&lt;/code>&lt;/h2>
 &lt;p>在本地建立一个Hexo站点，可以参考官方快速开始文档。&lt;/p>
@@ -47,10 +47,10 @@ public/
 &lt;code>github-deploy-key.pub&lt;/code>&lt;/p>
 &lt;p>存储博客源文件 的 repo 里的 Settings/Secrets 中添加 &lt;code>DEPLOY_KEY&lt;/code>，值为刚刚生成的私钥
 &lt;code>github-deploy-key&lt;/code>&lt;/p>
-&lt;p>{% note warning %}&lt;/p>
+&lt;blockquote>
 &lt;p>注意：切记不要多复制空格!!!&lt;/p>
 &lt;p>切记要勾选 Allow write access，否则会出现无法部署的情况。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="配置-hexo-的-_configyml">配置 Hexo 的 _config.yml&lt;/h2>
 &lt;p>添加部署配置。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="c"># Deployment&lt;/span>&lt;span class="w">
@@ -561,9 +561,9 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">verify&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 评论时是否需要验证，需 jQuery 支持&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>linux搭建Minecraft服务器</title><link>https://zhixuan666.github.io/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/posts/2b678319/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/minecraft.png" alt="Featured image of post linux搭建Minecraft服务器" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>Minecraft即我的世界，手头有闲置服务器的玩家算是有福了，可以自己搭建服务器，当然这片教程也适用于家庭，只不过需求可能有丶高。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
+&lt;blockquote>
 &lt;p>本篇教程仅说明如何在Linux下搭建，全程使用root用户，使用的发行版是Debian9.5，同时适用于Ubuntu和其他的Debian系Linux使用，RHEL仅部分命令不同，其他也是相同的。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="搭建minecraft服务器">搭建Minecraft服务器&lt;/h2>
 &lt;h3 id="安装-java-和-screen">安装 &lt;code>Java&lt;/code> 和 &lt;code>Screen&lt;/code>&lt;/h3>
@@ -591,12 +591,14 @@ $ &lt;span class="nb">cd&lt;/span> /mcserver &lt;span class="c1">#进入mcserver
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">wget 粘贴刚刚复制到链接
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>下载好了之后，启动服务器：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">java -Xms512M -Xmx1024M -jar server.jar -nogui
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>第一次需要修改 &lt;code>EULA&lt;/code> 文件&lt;/p>
+&lt;/blockquote>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">vim eula.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将eula=false改成eula=true，再次输入指令。&lt;/p>
-&lt;p>搭建成功
-{% endnote %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>将 eula=false 改成 eula=true ，再次输入指令。&lt;/p>
+&lt;/blockquote>
+&lt;p>搭建成功&lt;/p>
 &lt;hr>
 &lt;p>关于&lt;a class="link" href="#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6-server-properties" >配置文件&lt;/a>&lt;/p>
 &lt;hr>
@@ -613,16 +615,18 @@ $ &lt;span class="nb">cd&lt;/span> /mcserver &lt;span class="c1">#进入mcserver
 java -jar forge-*****-install.jar -nogui --installServer
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>等待安装， &lt;code>ls&lt;/code> 看到多几个文件我们输入：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">java -Xms512M -Xmx1024M -jar forge-*****-universal.jar -nogui
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% note info %}&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>第一次需要修改 &lt;code>EULA&lt;/code> 文件&lt;/p>
+&lt;/blockquote>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">vim eula.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将eula=false改成eula=true，再次输入指令。&lt;/p>
-&lt;p>搭建成功
-{% endnote %}&lt;/p>
-&lt;p>{% note info %}&lt;/p>
-&lt;h3 id="如何添加mod">如何添加MOD&lt;/h3>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>将eula=false改成eula=true，再次输入指令。&lt;/p>
+&lt;/blockquote>
+&lt;p>搭建成功&lt;/p>
+&lt;blockquote>
+&lt;p>如何添加MOD&lt;/p>
 &lt;p>将下载好的mod放在，mods文件夹中，重启服务器。&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="配置文件-serverproperties">配置文件 &lt;code>server.properties&lt;/code>&lt;/h2>
 &lt;p>我觉得有用的conf&lt;/p>
@@ -646,11 +650,11 @@ online-mode=false #启用盗版
 &lt;/ul>
 &lt;p>{% endnote %}&lt;/p>
 &lt;h3 id="安装-git">安装 Git&lt;/h3>
-&lt;p>{% note info %}&lt;/p>
+&lt;blockquote>
 &lt;p>&lt;strong>Windows&lt;/strong> 用户 直接在 &lt;a class="link" href="https://git-scm.com/download/win" target="_blank" rel="noopener"
 >官网&lt;/a> 下 &lt;code>Git&lt;/code> 很慢, 可以通过 &lt;a class="link" href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener"
 >这个网页&lt;/a> 下载&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;p>安装完 &lt;code>Git&lt;/code> 后，右键打开 &lt;code>Git Bash Here&lt;/code> ，输入 &lt;code>git --version&lt;/code> ,出现版本信息就说明安装成功了。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">zhixuan@DESKTOP-2MMI2OK MINGW64 /d/desktop
 $ git --version
@@ -727,11 +731,11 @@ $ hexo s
 &lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/cfdb546a/hexo-next-one-2.png" alt="预览" />
 &lt;/picture>&lt;/p>
 &lt;p>现在，我们已经成功安装 &lt;code>Next&lt;/code> 主题。&lt;/p>
-&lt;p>{% note info %}&lt;/p>
+&lt;blockquote>
 &lt;p>关于更多基本操作和基础知识，请查阅 &lt;a class="link" href="https://hexo.io/zh-cn/" target="_blank" rel="noopener"
 >Hexo&lt;/a> 与 &lt;a class="link" href="http://theme-next.iissnan.com/" target="_blank" rel="noopener"
 >NexT&lt;/a> 官方文档.&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="github设置">Github设置&lt;/h2>
 &lt;p>我们需要在 &lt;code>Github&lt;/code> 上创建一个仓库来托管我们的站点。&lt;/p>
