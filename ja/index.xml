@@ -96,7 +96,7 @@ PasswordAuthentication yes # ユーザー名とパスワードによるログイ
 &lt;span class="nx">expectedMAC&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">mac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">nil&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="k">return&lt;/span> &lt;span class="nx">hmac&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">messageMAC&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">expectedMAC&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/minecraft.png" alt="Featured image of post linux Minecraftサーバーを構築" />&lt;h2 id="初めに">初めに&lt;/h2>
 &lt;p>{% note info %}&lt;/p>
 &lt;p>この記事では、全体で &lt;code>root&lt;/code> ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 &lt;code>Ubuntu&lt;/code> やその他の &lt;code>Debian&lt;/code> ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。&lt;/p>
 &lt;p>{% endnote %}&lt;/p>
