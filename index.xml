@@ -198,7 +198,7 @@ nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Co
 [photo4]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 [photo5]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 [photo6]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
---></description></item><item><title>使用 ssh 工具连接到 wsl</title><link>https://zhixuan666.github.io/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/posts/e0320a75/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+--></description></item><item><title>使用 ssh 工具连接到 wsl</title><link>https://zhixuan666.github.io/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/posts/e0320a75/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/ssh.png" alt="Featured image of post 使用 ssh 工具连接到 wsl" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近因为电脑性能不够，想在 &lt;code>wsl&lt;/code> 上来搭建 &lt;code>code-server&lt;/code> 结果无法启动 &lt;code>ssh&lt;/code> 服务&lt;/p>
 &lt;hr>
 &lt;h2 id="安装-ssh">安装 ssh&lt;/h2>

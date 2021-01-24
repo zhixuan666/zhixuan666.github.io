@@ -68,7 +68,7 @@ nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Co
 [photo4]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 [photo5]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
 [photo6]:https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/
---></description></item><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>&lt;h2 id="はじめに">はじめに&lt;/h2>
+--></description></item><item><title>WSL に SSH で接続する方法</title><link>https://zhixuan666.github.io/ja/posts/e0320a75/</link><pubDate>Sun, 22 Nov 2020 16:41:05 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/e0320a75/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/ssh.png" alt="Featured image of post WSL に SSH で接続する方法" />&lt;h2 id="はじめに">はじめに&lt;/h2>
 &lt;p>WSL のターミナルは、コピー＆ペーストがし辛く、vscodeで操作できないものかと思い立った。&lt;/p>
 &lt;p>{% note info %}&lt;/p>
 &lt;p>WSL (Windows Subsystem for Linux)&lt;/p>
