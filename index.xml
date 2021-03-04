@@ -413,8 +413,8 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 >中国版&lt;/a> 需要 &lt;code>实名&lt;/code> 和 &lt;code>备案&lt;/code>&lt;/p>
 &lt;p>注册并登录，选择创建应用，名称随便写，创建。&lt;/p>
 &lt;p>&lt;picture>
-&lt;source type="image/webp" srcset="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/b17cfc64/create.png.webp">
-&lt;img loading="lazy" src="%28https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/b17cfc64/create.png" alt="create" />
+&lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/b17cfc64/create.png.webp">
+&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/b17cfc64/create.png" alt="create" />
 &lt;/picture>&lt;/p>
 &lt;p>打开设置 -&amp;gt; 安全中心 -&amp;gt; Web安全域名 -&amp;gt; 添加博客域名&lt;/p>
 &lt;p>&lt;picture>
