@@ -47,9 +47,9 @@ $ sudo systemctl restart docker
 nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Connection refused
 &lt;span class="p">;;&lt;/span> connection timed out&lt;span class="p">;&lt;/span> no servers could be reached
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="#DNS" >DNSエラー&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab" >ファイアウォールが有効になっている場合&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2%e3%82%a6%e3%82%a9%e3%83%bc%e3%83%ab%e3%81%a7%e3%81%ae%e3%83%9d%e3%83%bc%e3%83%88%e9%96%8b%e6%94%be" >ファイアウォールが有効になっている場合&lt;/a>&lt;/p>
 &lt;h3 id="dns">DNS&lt;/h3>
-&lt;p>構成ファイル &lt;code>/etc/docker/daemon.json&lt;/code> を変更し、&lt;code>DNS&lt;/code> サーバーを追加して、 `` `Docker```デーモンを再起動します（ファイルが存在しない場合は、新しいファイルを作成してください）&lt;/p>
+&lt;p>構成ファイル &lt;code>/etc/docker/daemon.json&lt;/code> を変更し、&lt;code>DNS&lt;/code> サーバーを追加して、 &lt;code>Docker&lt;/code> デーモンを再起動します（ファイルが存在しない場合は、新しいファイルを作成してください）&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;dns&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;8.8.8.8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;1.1.1.1&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>

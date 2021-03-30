@@ -2,7 +2,8 @@
 &lt;p>使用的依赖包&lt;a class="link" href="https://github.com/bwmarrin/discordgo" target="_blank" rel="noopener"
 >Github&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">$ go get github.com/bwmarrin/discordgo
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="创建discord-bot">创建Discord Bot&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="创建discord-bot">创建Discord Bot&lt;/h2>
 &lt;ol>
 &lt;li>访问 &lt;a class="link" href="https://discord.com/developers/applications" target="_blank" rel="noopener"
 >applications&lt;/a>&lt;/li>
@@ -12,6 +13,7 @@
 &lt;li>General Information -&amp;gt; Client ID -&amp;gt; Copy&lt;/li>
 &lt;li>&lt;a class="link" href="" >https://discord.com/api/oauth2/authorize?client_id={{Clinet ID}}&amp;amp;permissions=0&amp;amp;scope=bot&lt;/a> -&amp;gt; 添加到服务器&lt;/li>
 &lt;/ol>
+&lt;hr>
 &lt;h2 id="代码">代码&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="c1">// main.go
 &lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
@@ -68,7 +70,8 @@
 &lt;span class="c1">// 如果Bot上线更改游戏状态
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">UpdateGameStatus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Minecraft&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="后记">后记&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="后记">后记&lt;/h2>
 &lt;p>&lt;a class="link" href="https://discord.gg/0f1SbxBZjYoCtNPP" target="_blank" rel="noopener"
 >discordgo官方&lt;/a>&lt;/p></description></item><item><title>解决 hexo 大量空行</title><link>https://zhixuan666.github.io/posts/44e9e030/</link><pubDate>Tue, 15 Dec 2020 22:23:55 +0000</pubDate><guid>https://zhixuan666.github.io/posts/44e9e030/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/1.jpg" alt="Featured image of post 解决 hexo 大量空行" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>在使用 &lt;a class="link" href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener"
