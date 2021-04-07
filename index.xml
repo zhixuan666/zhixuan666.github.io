@@ -473,7 +473,12 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png.webp">
 &lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/9c894058/download.png" alt="download" />
 &lt;/picture>&lt;/p>
-&lt;p>OK!&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/1.jpg" alt="Featured image of post Hexo NexT 魔改 valine" />&lt;h2 id="简介">简介&lt;/h2>
+&lt;p>OK!&lt;/p></description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/1.jpg" alt="Featured image of post Hexo NexT 魔改 valine" />&lt;h2 id="警告">警告&lt;/h2>
+&lt;blockquote>
+&lt;p>valine 现在会泄漏个人信息&lt;a class="link" href="https://github.com/xCss/Valine/issues/336" target="_blank" rel="noopener"
+>#366&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="简介">简介&lt;/h2>
 &lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
 &lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
 &lt;p>{% note warning %}&lt;/p>

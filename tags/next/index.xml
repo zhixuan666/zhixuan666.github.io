@@ -9,7 +9,8 @@ custom_file_path:#head: source/_data/head.njk#header: source/_data/header.njk#si
 body{ background:url(图片链接); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; background-position:center; } 其中的css样式属性都可以根据你的自定义图片来更改，以达到最佳的效果。
 如果没效果 关于styles.styl
 点击爱心效果 在 /themes/next/source/js 下新建文件 love.js，在 love.js 文件中添加以下代码:
-!function(e,t,a){function n(){c(&amp;#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &amp;#39;&amp;#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.</description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>简介 Valine 诞生于2017年8月7日，是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统。
+!function(e,t,a){function n(){c(&amp;#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &amp;#39;&amp;#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.</description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>警告 valine 现在会泄漏个人信息#366
+简介 Valine 诞生于2017年8月7日，是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统。
 理论上支持但不限于静态博客，目前已有 Hexo 、 Jekyll 、 Typecho 、 Hugo 、 Ghost 等博客程序在使用Valine。
 {% note warning %}
 本篇是 Hexo 的 Next8.0 主题的valine美化
