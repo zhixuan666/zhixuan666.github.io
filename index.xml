@@ -482,9 +482,9 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;h2 id="简介">简介&lt;/h2>
 &lt;p>Valine 诞生于2017年8月7日，是一款基于 &lt;code>LeanCloud&lt;/code> 的快速、简洁且高效的无后端评论系统。&lt;/p>
 &lt;p>理论上支持但不限于静态博客，目前已有 &lt;code>Hexo&lt;/code> 、 &lt;code>Jekyll&lt;/code> 、 &lt;code>Typecho&lt;/code> 、 &lt;code>Hugo&lt;/code> 、 &lt;code>Ghost&lt;/code> 等博客程序在使用Valine。&lt;/p>
-&lt;p>{% note warning %}&lt;/p>
+&lt;blockquote>
 &lt;p>本篇是 &lt;code>Hexo&lt;/code> 的 &lt;code>Next8.0&lt;/code> 主题的valine美化&lt;/p>
-&lt;p>{% endnote %}&lt;/p>
+&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="启用-valine">启用 &lt;code>valine&lt;/code>&lt;/h2>
 &lt;p>访问 &lt;code>leancloud&lt;/code>，传送门
@@ -524,20 +524,20 @@ PasswordAuthentication yes # 允许用户名密码方式登录&lt;/p>
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">enableQQ&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 是否启用QQ登入&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">requiredFields&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">nick, mail]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 设置必填项 [nick,mail,link]&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>此时以可以用valine&lt;/p>
-&lt;p>{% note danger %}&lt;/p>
+&lt;blockquote>
 &lt;h3 id="如果只是出现valine不能评论的话">如果只是出现valine不能评论的话&lt;/h3>
 &lt;p>按 &lt;code>F12&lt;/code> 如果在 &lt;code>bash&lt;/code> 出现 ERR:: TIME_OUT&lt;/p>
 &lt;p>&lt;picture>
 &lt;source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/b17cfc64/console.png.webp">
 &lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/b17cfc64/console.png" alt="console" />
-&lt;/picture>&lt;/p>
-&lt;p>如果是国际版，修改valine&lt;/p>
+&lt;/picture>
+如果是国际版，修改valine&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="nt">valine&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">enable&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">enable&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">···&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">serverURLs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://APPID的前八位.api.lncldglobal.com/&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">···&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>{% endnote %}&lt;/p>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/blockquote>
 &lt;hr>
 &lt;h2 id="美化-valine">美化 &lt;code>valine&lt;/code>&lt;/h2>
 &lt;h3 id="在-veditor-输入界面增加背景图">在 veditor 输入界面增加背景图&lt;/h3>
