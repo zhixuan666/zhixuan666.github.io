@@ -21,21 +21,7 @@ custom_file_path:#head: source/_data/head.njk#header: source/_data/header.njk#si
 body{ background:url(图片链接); background-size:cover; background-repeat:no-repeat; background-attachment:fixed; background-position:center; } 其中的css样式属性都可以根据你的自定义图片来更改，以达到最佳的效果。
 如果没效果 关于styles.styl
 点击爱心效果 在 /themes/next/source/js 下新建文件 love.js，在 love.js 文件中添加以下代码:
-!function(e,t,a){function n(){c(&amp;#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &amp;#39;&amp;#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.</description></item><item><title>百度网盘在线解析 不限速高速下载（已失效</title><link>https://zhixuan666.github.io/posts/9c894058/</link><pubDate>Sat, 10 Oct 2020 10:13:54 +0000</pubDate><guid>https://zhixuan666.github.io/posts/9c894058/</guid><description>已失效 前言 此工具使用 IDM + 在线解析 博主的下载速度 16MB
-自从大名鼎鼎的pandownload被ban之后，其实陆续出现了很多这一类工具，当时因为有会员在手，所以只是做观望，什么亿寻、速盘、PDown之类的都是前仆后继，各领风骚，可见百度网盘受欢迎的程度。
-安装IDM IDM下载
-云解析下载地址 KinhDownload网页版
-使用起来也不用我多说了，大家都熟悉
-分别复制粘贴网盘分享链接和提取码即可
-接着我们点击要下载的文件，会打开一个已解析的页面
-修改一下IDM的UA（即User-Agent）
-具体如下：
-1.首先打开IDM选项，接着找到下载——UA
-最后，将UA设置成 显示的User-Agent ，点击确定即可
-如果想要设置回来，复制以下一段，就能更改回默认
-Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
-复制 URL 进到IDM中下载。
-OK!</description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>警告 valine 现在会泄漏个人信息#366
+!function(e,t,a){function n(){c(&amp;#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &amp;#39;&amp;#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.</description></item><item><title>Hexo NexT 魔改 valine</title><link>https://zhixuan666.github.io/posts/b17cfc64/</link><pubDate>Sun, 27 Sep 2020 10:05:32 +0000</pubDate><guid>https://zhixuan666.github.io/posts/b17cfc64/</guid><description>警告 valine 现在会泄漏个人信息#366
 简介 Valine 诞生于2017年8月7日，是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统。
 理论上支持但不限于静态博客，目前已有 Hexo 、 Jekyll 、 Typecho 、 Hugo 、 Ghost 等博客程序在使用Valine。
 本篇是 Hexo 的 Next8.0 主题的valine美化
