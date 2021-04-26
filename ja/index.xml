@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 28 Nov 2020 18:20:08 +0000</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS7 に Docker をインストールする方法</title><link>https://zhixuan666.github.io/ja/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/4064fc4/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/docker.png" alt="Featured image of post CentOS7 に Docker をインストールする方法" />&lt;h2 id="前提">前提&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 14 Mar 2021 18:26:02 +0900</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>Golang で Discord ボットを作る</title><link>https://zhixuan666.github.io/ja/posts/8fa6cc7e/</link><pubDate>Sun, 14 Mar 2021 18:26:02 +0900</pubDate><guid>https://zhixuan666.github.io/ja/posts/8fa6cc7e/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/disgo.png" alt="Featured image of post Golang で Discord ボットを作る" />&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>サードパーティーライブラリー
+&lt;a class="link" href="https://github.com/bwmarrin/discordgo" target="_blank" rel="noopener"
+>bwmarrin/discordg&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">$ go get github.com/bwmarrin/discordgo
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="discord-bot-作成">Discord Bot 作成&lt;/h2>
+&lt;ol>
+&lt;li>Go to &lt;a class="link" href="https://discord.com/developers/applications" target="_blank" rel="noopener"
+>applications&lt;/a>&lt;/li>
+&lt;li>click &lt;code>New Application&lt;/code>&lt;/li>
+&lt;li>ボットの名前&lt;/li>
+&lt;li>Bot -&amp;gt; Add Bot -&amp;gt; Yes, do it! -&amp;gt; Copy &lt;code>TOKEN&lt;/code>&lt;/li>
+&lt;li>General Information -&amp;gt; Client ID -&amp;gt; Copy&lt;/li>
+&lt;li>&lt;a class="link" href="" >https://discord.com/api/oauth2/authorize?client_id={{Clinet ID}}&amp;amp;permissions=0&amp;amp;scope=bot&lt;/a> -&amp;gt; サーバーに追加&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="コード">コード&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="c1">// main.go
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;span class="s">&amp;#34;log&amp;#34;&lt;/span>
+&lt;span class="s">&amp;#34;net/http&amp;#34;&lt;/span>
+&lt;span class="s">&amp;#34;os&amp;#34;&lt;/span>
+&lt;span class="s">&amp;#34;github.com/bwmarrin/discordgo&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Bot の後ろにスペース
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">discord&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Bot &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;{{TOKEN}}&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Create discord bot failed: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// イベントリスト https://discord.com/developers/docs/topics/gateway#commands-and-events-gateway-events
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">discord&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">AddHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handlers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Ready&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nx">discord&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">AddHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handlers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">MessageCreate&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nx">err&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">discord&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Open&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Open bot failed: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// Wait here until CTRL-C or other term signal is received.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Bot is now running. Press CTRL-C to exit.&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nx">sc&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nb">make&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">chan&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Signal&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nx">signal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Notify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sc&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">syscall&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">SIGINT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">syscall&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">SIGTERM&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Interrupt&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Kill&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="o">&amp;lt;-&lt;/span>&lt;span class="nx">sc&lt;/span>
+&lt;span class="c1">// Cleanly close down the Discord session.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">dg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Close&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="handler-の構成">handler の構成&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="kd">func&lt;/span> &lt;span class="nf">MessageCreate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Session&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">m&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&amp;lt;&lt;/span>&lt;span class="nx">event&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">&amp;gt;)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="簡単の-handle">簡単の &lt;code>handle&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="c1">// handlers/handlers.go
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kn">package&lt;/span> &lt;span class="nx">handlers&lt;/span>
+&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;span class="s">&amp;#34;time&amp;#34;&lt;/span>
+&lt;span class="s">&amp;#34;github.com/bwmarrin/discordgo&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="nf">MessageCreate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Session&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">m&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">MessageCreate&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ID&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">State&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">User&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ID&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%20s %20s %20s &amp;gt; %s\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ChannelID&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Now&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nf">Format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Stamp&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Username&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Content&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">switch&lt;/span> &lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Content&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">//コンテンツが `hello` の時 @author hello
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="s">&amp;#34;hello&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">ChannelMessageSend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ChannelID&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;&amp;lt;@!&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">m&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ID&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s">&amp;#34;&amp;gt; hello&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="nf">Ready&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Session&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">m&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">discordgo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Ready&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ボットのゲームステータス
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">UpdateGameStatus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Minecraft&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="后记">后记&lt;/h2>
+&lt;p>&lt;a class="link" href="https://discord.gg/0f1SbxBZjYoCtNPP" target="_blank" rel="noopener"
+>discordgo官方&lt;/a>&lt;/p></description></item><item><title>CentOS7 に Docker をインストールする方法</title><link>https://zhixuan666.github.io/ja/posts/4064fc4/</link><pubDate>Sat, 28 Nov 2020 18:20:08 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/4064fc4/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/docker.png" alt="Featured image of post CentOS7 に Docker をインストールする方法" />&lt;h2 id="前提">前提&lt;/h2>
 &lt;p>DockerCE は CentOS7 の64ビットバージョンをサポートし、カーネルバージョンが3.10以上である必要があります&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
 >DOCKER公式サイト&lt;/a>&lt;/p>
@@ -54,7 +130,7 @@ nslookup: write to &lt;span class="s1">&amp;#39;127.0.1.1&amp;#39;&lt;/span>: Co
 &lt;span class="nt">&amp;#34;dns&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;8.8.8.8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;1.1.1.1&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h2 id="感谢及参考">感谢及参考&lt;/h2>
+&lt;h2 id="リンク">リンク&lt;/h2>
 &lt;ul>
 &lt;li>🔗&lt;a class="link" href="https://www.docker.com/" target="_blank" rel="noopener"
 >docker&lt;/a>&lt;/li>
