@@ -172,25 +172,25 @@ PasswordAuthentication yes # ユーザー名とパスワードによるログイ
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr></description></item><item><title>linux Minecraftサーバーを構築</title><link>https://zhixuan666.github.io/ja/posts/2b678319/</link><pubDate>Mon, 21 Sep 2020 21:21:52 +0000</pubDate><guid>https://zhixuan666.github.io/ja/posts/2b678319/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/minecraft.png" alt="Featured image of post linux Minecraftサーバーを構築" />&lt;h2 id="初めに">初めに&lt;/h2>
 &lt;blockquote>
-&lt;p>この記事では、全体で &lt;code>root&lt;/code> ユーザーを使用して Linux でビルドする方法のみを説明し、使用されるディストリビューションはDebian9.5です。 &lt;code>Ubuntu&lt;/code> やその他の &lt;code>Debian&lt;/code> ベースの Linux にも適しています。RHELは一部のコマンドのみが異なり、他のコマンドは同じです。&lt;/p>
+&lt;p>使用なもの&lt;/p>
+&lt;ul>
+&lt;li>Ubuntuおよびその他のDebian&lt;/li>
+&lt;li>internet&lt;/li>
+&lt;li>パブリックネットワークIP&lt;/li>
+&lt;/ul>
 &lt;/blockquote>
 &lt;hr>
 &lt;h2 id="minecraftサーバーを構築">Minecraftサーバーを構築&lt;/h2>
 &lt;h3 id="java-と-screen--インストール">&lt;code>Java&lt;/code> と &lt;code>Screen&lt;/code> インストール&lt;/h3>
-&lt;p>Ubuntuおよびその他のDebianベースのコマンド&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt-get update
-$ sudo apt-get install java screen -j
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>RHELのコマンド&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo yum update
-$ sudo yum install java screen -y
+$ sudo apt-get install openjdk-8-jre screen
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="サーバーにファイルを保存するためのディレクトリを作成します">サーバーにファイルを保存するためのディレクトリを作成します&lt;/h3>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> ~
-mkdir mcserver
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">mkdir ~/mcserver
 &lt;span class="nb">cd&lt;/span> /mcserver
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;p>forge サーバーを構築するには、&lt;a class="link" href="#forge-%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b" >こちら&lt;/a>&lt;/p>
 &lt;hr>
-&lt;h3 id="普通-サーバーを構築する">&lt;code>普通&lt;/code> サーバーを構築する&lt;/h3>
+&lt;h3 id="vanilla-サーバーを構築する">&lt;code>vanilla&lt;/code> サーバーを構築する&lt;/h3>
 &lt;p>&lt;a class="link" href="https://mcversions.net" target="_blank" rel="noopener"
 >MCversions&lt;/a> にアクセスし&lt;/p>
 &lt;p>&lt;picture>
@@ -202,14 +202,18 @@ mkdir mcserver
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>ダウンロード後、サーバーを起動します。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ java -Xms512M -Xmx1024M -jar server.jar -nogui
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>初めては　&lt;code>EULA&lt;/code> ファイルを変更する必要があります&lt;/p>
+&lt;ul>
+&lt;li>Xms512M: 最小メモリ&lt;/li>
+&lt;li>Xmx1024M: 最大メモリ&lt;/li>
+&lt;/ul>
 &lt;/blockquote>
+&lt;h3 id="eula">&lt;code>EULA&lt;/code>&lt;/h3>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim eula.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>eula = false を eula = trueに変更し、コマンドを再入力します。&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;p>&lt;a class="link" href="#%e6%a7%8b%e6%88%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab-server.properties" >構成ファイルについて&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="#%e6%a7%8b%e6%88%90%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab-serverproperties" >構成ファイルについて&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="forge-サーバーを構築する">&lt;code>forge&lt;/code> サーバーを構築する&lt;/h3>
 &lt;p>&lt;a class="link" href="https://files.minecraftforge.net" target="_blank" rel="noopener"
@@ -225,8 +229,12 @@ $ java -jar forge-*****-install.jar -nogui --installServer
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>インストールを待っていると、 &lt;code>ls&lt;/code>　はさらにいくつかのファイルを確認し、次のように入力します。&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ java -Xms512M -Xmx1024M -jar forge-*****-universal.jar -nogui
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>初めては　&lt;code>EULA&lt;/code> ファイルを変更する必要があります&lt;/p>
+&lt;ul>
+&lt;li>Xms512M: 最小メモリ&lt;/li>
+&lt;li>Xmx1024M: 最大メモリ&lt;/li>
+&lt;/ul>
 &lt;/blockquote>
+&lt;h3 id="eula-1">&lt;code>EULA&lt;/code>&lt;/h3>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim eula.txt
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>eula = falseをeula = trueに変更し、コマンドを再入力します。&lt;/p>
