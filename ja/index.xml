@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 14 Mar 2021 18:26:02 +0900</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>Golang で Discord ボットを作る</title><link>https://zhixuan666.github.io/ja/posts/8fa6cc7e/</link><pubDate>Sun, 14 Mar 2021 18:26:02 +0900</pubDate><guid>https://zhixuan666.github.io/ja/posts/8fa6cc7e/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/disgo.png" alt="Featured image of post Golang で Discord ボットを作る" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 24 May 2021 21:24:00 +0900</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>Tailwind Ie Support</title><link>https://zhixuan666.github.io/ja/posts/5766af24/</link><pubDate>Mon, 24 May 2021 21:24:00 +0900</pubDate><guid>https://zhixuan666.github.io/ja/posts/5766af24/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/tailwindcss.png" alt="Featured image of post Tailwind Ie Support" />&lt;blockquote>
+&lt;p>Tailwind v2.1.2 からは、IE11を含むIEのどのバージョンもサポートしておりません (&lt;code>grid&lt;/code> は使えません&lt;/p>
+&lt;p>サポートした v1.9.0 を使いましょう&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="tailwind-無理やりサポートさせる方法">Tailwind 無理やりサポートさせる方法&lt;/h2>
+&lt;p>&lt;code>autoprefixer&lt;/code> や &lt;code>postcss-color-rgba-fallback&lt;/code> を利用する&lt;/p>
+&lt;p>&lt;code>autoprefixer&lt;/code>: サポート対象にしたいブラウザを設定すると、自動的にベンダープレフィックスを付け&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="c">/* 使用する前 */&lt;/span>
+&lt;span class="p">::&lt;/span>&lt;span class="nd">placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">image&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sx">image@1x.png&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">min-resolution&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">2dppx&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">image&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sx">image@2x.png&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/* 使用した後 */&lt;/span>
+&lt;span class="p">::&lt;/span>&lt;span class="nd">-moz-placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">:&lt;/span>&lt;span class="nd">-ms-input-placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">::&lt;/span>&lt;span class="nd">placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">image&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sx">image@1x.png&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">-webkit-min-device-pixel-ratio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">2&lt;/span>&lt;span class="o">),&lt;/span>
+&lt;span class="o">(&lt;/span>&lt;span class="nt">min-resolution&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">2dppx&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">image&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sx">image@2x.png&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>postcss-color-rgba-fallback&lt;/code>: IE が対応してない　rgba　を16進数カラーコードを追加する&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="c">/* 使用する前 */&lt;/span>
+&lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">153&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">221&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">153&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.8&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">102&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">103&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mf">.3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/* 使用した後 */&lt;/span>
+&lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#99DD99&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">153&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">221&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">153&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.8&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mh">#646667&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">102&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">103&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mf">.3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install">Install&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">// yarn: パッケージ管理システム
+$ npm install -g yarn
+$ mkdir ./new-project
+// プロジェクト初期化
+$ yarn init -y
+// tailwindcss や プラグイン install
+$ yarn add tailwindcss autoprefixer postcss-color-rgba-fallback
+// tailwindcss config 初期化
+$ yarn run tailwindcss init -p
+// postcss install
+$ yarn add postcss postcss-cli --dev
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config">Config&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// tailwind.config.js
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">purge&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[],&lt;/span>
+&lt;span class="nx">darkMode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// or &amp;#39;media&amp;#39; or &amp;#39;class&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">theme&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">extend&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">variants&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;span class="nx">plugins&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[],&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// postcss.config.js
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">plugins&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;tailwindcss&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;autoprefixer&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;postcss-color-rgba-fallback&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="build">Build&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">$ postcss src/style.css -o src/style.min.css
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="thank-for">Thank for&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener"
+>🔗tailwindlabs/tailwindcss&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/postcss/postcss" target="_blank" rel="noopener"
+>🔗postcss/postcss&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/postcss/postcss-color-rgba-fallback" target="_blank" rel="noopener"
+>🔗postcss/postcss-color-rgba-fallback&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener"
+>🔗postcss/autoprefixer&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Golang で Discord ボットを作る</title><link>https://zhixuan666.github.io/ja/posts/8fa6cc7e/</link><pubDate>Sun, 14 Mar 2021 18:26:02 +0900</pubDate><guid>https://zhixuan666.github.io/ja/posts/8fa6cc7e/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/disgo.png" alt="Featured image of post Golang で Discord ボットを作る" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>サードパーティーライブラリー
 &lt;a class="link" href="https://github.com/bwmarrin/discordgo" target="_blank" rel="noopener"
 >bwmarrin/discordg&lt;/a>&lt;/p>
