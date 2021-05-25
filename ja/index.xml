@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 24 May 2021 21:24:00 +0900</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>Tailwind v2 無理やりサポートさせる方法</title><link>https://zhixuan666.github.io/ja/posts/5766af24/</link><pubDate>Mon, 24 May 2021 21:24:00 +0900</pubDate><guid>https://zhixuan666.github.io/ja/posts/5766af24/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/tailwindcss.png" alt="Featured image of post Tailwind v2 無理やりサポートさせる方法" />&lt;blockquote>
-&lt;p>Tailwind v2.1.2 からは、IE11を含むIEのどのバージョンもサポートしておりません (&lt;code>grid&lt;/code> は使えません&lt;/p>
-&lt;p>サポートした v1.9.0 を使いましょう&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zhixuan's Blog</title><link>https://zhixuan666.github.io/ja/</link><description>Recent content on zhixuan's Blog</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 24 May 2021 21:24:00 +0900</lastBuildDate><atom:link href="https://zhixuan666.github.io/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>Tailwind v2 無理やり対応させる方法</title><link>https://zhixuan666.github.io/ja/posts/5766af24/</link><pubDate>Mon, 24 May 2021 21:24:00 +0900</pubDate><guid>https://zhixuan666.github.io/ja/posts/5766af24/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/zhixuan666/gh-blog@master/images/features/tailwindcss.png" alt="Featured image of post Tailwind v2 無理やり対応させる方法" />&lt;blockquote>
+&lt;p>Tailwind v2.1.2 からは、IE11を含むIEのどのバージョンも対応しておりません (&lt;code>grid&lt;/code> は使えません&lt;/p>
+&lt;p>対応した v1.9.0 を使いましょう&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="tailwind-無理やりサポートさせる方法">Tailwind 無理やりサポートさせる方法&lt;/h2>
+&lt;h2 id="tailwind-無理やり対応させる方法">Tailwind 無理やり対応させる方法&lt;/h2>
 &lt;p>&lt;code>autoprefixer&lt;/code> や &lt;code>postcss-color-rgba-fallback&lt;/code> を利用する&lt;/p>
-&lt;p>&lt;code>autoprefixer&lt;/code>: サポート対象にしたいブラウザを設定すると、自動的にベンダープレフィックスを付け&lt;/p>
+&lt;p>&lt;code>autoprefixer&lt;/code>: 対応対象にしたいブラウザを設定すると、自動的にベンダープレフィックスを付け&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="c">/* 使用する前 */&lt;/span>
 &lt;span class="p">::&lt;/span>&lt;span class="nd">placeholder&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
