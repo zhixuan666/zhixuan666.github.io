@@ -9,7 +9,7 @@ CI/CD (continuous integration and continuous deployment)
 存储博客源文件 可以是私有的 挂载GitHub Pages。 在 blog 根目录下添加 .gitignore 文件，添加
 .DS_Store Thumbs.db *.log node_modules/ public/ .deploy*/ 将本地的博客源文件推送到 github 仓库。
 准备秘钥 生成 ssh 部署私钥
-$ ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f github-deploy-key -N &amp;#34;&amp;#34; GitHub Pages 的 repo 里的 Settings/Deploy keys 中添加刚刚生成的公钥 Title 随便 值为刚刚生成的公钥 github-deploy-key.</description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>简介 一个主题，三种外观，选您所好 通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
+$ ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f github-deploy-key -N &amp;#34;&amp;#34; GitHub Pages 的 repo 里的 Settings/Deploy keys 中添加刚刚生成的公钥 Title 随便 值为刚刚生成的公钥 github-deploy-key.</description></item><item><title>Hexo Next 美化</title><link>https://zhixuan666.github.io/posts/bf8435b4/</link><pubDate>Sat, 31 Oct 2020 22:07:14 +0000</pubDate><guid>https://zhixuan666.github.io/posts/bf8435b4/</guid><description>简介
 custom.styl 文件 在新版 Next 中 custom.styl 文件改为 blog/source/_data/styles.styl
 在 主题配置文件 中:
 custom_file_path:#head: source/_data/head.njk#header: source/_data/header.njk#sidebar: source/_data/sidebar.njk#postMeta: source/_data/post-meta.njk#postBodyEnd: source/_data/post-body-end.njk#footer: source/_data/footer.njk#bodyEnd: source/_data/body-end.njk#variable: source/_data/variables.styl#mixin: source/_data/mixins.stylstyle:source/_data/styles.styl 美化 点击爱心效果 点击烟花爆炸效果 浏览器网页标题恶搞 背景图片 背景图片 创建 blog/source/_data/styles.styl 在 styles.styl 文件中添加以下代码:
